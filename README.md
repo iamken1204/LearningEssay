@@ -1,1 +1,1 @@
-#### A note for my learning essay.
+#### An essay for my learning.
