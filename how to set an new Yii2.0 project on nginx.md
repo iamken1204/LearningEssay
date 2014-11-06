@@ -5,7 +5,7 @@
 * `tar zxvf yii-basic-app-2.0.0.tgz`
 * 把`assets`, `runtime`, `web/assets`權限設成777
 * 把`config/web.php`的`request`改成:
-```
+```php
 'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'enableCsrfValidation' => false,
