@@ -60,10 +60,10 @@ server {
 	#error_page 404 403 http://web.yam.com/
 }
 ```
-* 輸入`ln -s /your_config_root/your_config_file /etc/nginx/sites-enabled/your_config_file`把config檔連結到nginx
-* 輸入`sudo /etc/init.d/nginx restart`重開伺服器讓設定生效
+* `ln -s /your_config_root/your_config_file /etc/nginx/sites-enabled/your_config_file`把config檔連結到nginx
+* `sudo /etc/init.d/nginx restart`重開伺服器讓設定生效
 * 下載一個yii專案壓縮檔.tgz
-* `tar zxvf yii-basic-app-2.0.0.tgz`解撒縮project
+* `tar zxvf yii-basic-app-2.0.0.tgz`解壓縮project
 * 把`assets`, `runtime`, `web/assets`權限設成777
 * 把`config/web.php`的`request`改成:
 ```php
