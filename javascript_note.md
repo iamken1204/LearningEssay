@@ -50,8 +50,8 @@ myName["name"] = "Ezreal";     <=>     myName.name = "Ezreal";
 
 ### Cache -1
 在物件裡面,cache的方式   
-先用$panel記住$('.panel-body')這個區塊,之後用$panel.find找裡面的dom   
-如果沒有cache的話,每次宣告$('.panel-body')都會從文件最上方開始找   
+先用`$panel`記住`$('.panel-body')`這個區塊,之後用`$panel.find`找裡面的dom   
+如果沒有cache的話,每次宣告`$('.panel-body')`都會從文件最上方開始找   
 ```
 var _videoControl = function(o) {
 	o.init = function() {
