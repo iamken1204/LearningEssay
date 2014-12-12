@@ -18,10 +18,25 @@
 `var list = [1, 32, 44];`   
 `var multiArray = [1, true, "Hello", Car={cc:1000}];`
 `var twoDimenitonal = [ [2,3,4], ['tt','jj'], [true, false, false] ];`   
-
+   
+### 找出陣列中是否包含某字串   
+```javascript
+var array = [2, 5, 9];
+var index = array.indexOf(2);
+// index is 0
+index = array.indexOf(7);
+// index is -1
+index = array.indexOf(9, 2);
+// index is 2
+index = array.indexOf(2, -1);
+// index is -1
+index = array.indexOf(2, -3);
+// index is 0
+```   
+   
 ### 宣告物件
 
-```
+```javascript
 var phoneBook = {};
 phoneBook.name = 'Annie';
 phoneBook.number = "1234-6677";
@@ -32,7 +47,7 @@ phoneBook.phone();
 ```   
    
 
-```
+```javascript
 var me = {
 	name: "Kettan",
 	age: 25
@@ -40,7 +55,7 @@ var me = {
 ```
 
 
-```
+```javascript
 var myName = new Object{}; // new a Object
 var myName = {}; // new a empty object
 myName["name"] = "Ezreal";     <=>     myName.name = "Ezreal";
@@ -52,7 +67,7 @@ myName["name"] = "Ezreal";     <=>     myName.name = "Ezreal";
 在物件裡面,cache的方式   
 先用`$panel`記住`$('.panel-body')`這個區塊,之後用`$panel.find`找裡面的dom   
 如果沒有cache的話,每次宣告`$('.panel-body')`都會從文件最上方開始找   
-```
+```javascript
 var _videoControl = function(o) {
 	o.init = function() {
 		$panel = $('.panel-body');
