@@ -20,7 +20,7 @@
 		assets/stylesheets/jobs.css.scss
 		
 		1. controller加上  
-			```ruby
+			```
 				def index
 				end
 			```
