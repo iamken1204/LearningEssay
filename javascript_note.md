@@ -46,3 +46,4 @@ var myName = {}; // new a empty object
 myName["name"] = "Ezreal";     <=>     myName.name = "Ezreal";
 ```
 
+
