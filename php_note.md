@@ -19,7 +19,7 @@ $b1 = array_unique($b);
 
 ### `json_decode()` 取回(陣列|物件)的方法   
 ```php
-json_decode($jString);        #回傳物件
+json_decode($jString);         #回傳物件
 json_decode($jString, true);   #回傳陣列
 ```
 
