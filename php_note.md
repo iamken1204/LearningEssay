@@ -23,3 +23,11 @@ json_decode($jString);         #回傳物件
 json_decode($jString, true);   #回傳陣列
 ```
 
+### `unset()`
+清除陣列
+```php
+$a = [1,2,3];
+unset($a[1]);
+// $a = [1,3];
+```
+
