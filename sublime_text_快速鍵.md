@@ -41,6 +41,8 @@
 `⌘ + R`				移到你輸入的變數該行   
 `⌃ + G`				移到你輸入的某某行
 
+`⌘ + ⌥ + ↓`   移動到游標上html dom class在css檔的位置(Goto Definition)  windows:F12
+
 ## Split Window
 
 `⌘ + ⌥ + 2`			程式區塊變成兩個 直列   
