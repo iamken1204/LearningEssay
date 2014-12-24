@@ -38,9 +38,9 @@ unset($a[1]);
 $time = "2014-12-24";
 $addMon = 3;
 $preTime = $time;
-$nextTime = strtotime("+$addMon month", strtotime($pretime));
+$nextTime = strtotime("+$addMon month", strtotime($preTime));
 $time = date("Y-m-d", $nextTime);
-echo $time
+echo $time;
 // 輸出2015-06-24
 ```
 
