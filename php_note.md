@@ -35,7 +35,7 @@ unset($a[1]);
 如果要幫 `$time = "2014-12-24"` 加3個月的話
 [參考](http://stackoverflow.com/questions/10724305/how-to-add-1-month-on-a-date-without-skipping-i-e-february)
 ```php
-$time = "2014-12-24;
+$time = "2014-12-24";
 $addMon = 3;
 $preTime = $time;
 $nextTime = strtotime("+$addMon month", strtotime($pretime));
