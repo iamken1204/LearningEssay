@@ -11,3 +11,8 @@
 ===
 * 新增遠端儲存庫 _可以有很多個, e.g. origin origin2..._
 `git remote add <remote_name> <remote_url>`
+
+===
+* 顯示某個remote資訊
+`git remote show origin`     
+`git remote show origin2`   
