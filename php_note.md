@@ -30,6 +30,14 @@ $a = [1,2,3];
 unset($a[1]);
 // $a = [1,3];
 ```   
+
+### 創造時間變數
+```php
+$dateTime = date("Y-m-d H:i:s", mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y')));
+// 順序為: h時 i分 s秒 m月 d日 Y年   時可為 h->十二小時制度 H->二十四小時制
+$time = date("ah:i:s");
+// "ah"的a用來顯示"am"或"pm"
+```   
    
 ### 修改已存在的時間
 如果要幫 `$time = "2014-12-24"` 加3個月的話
