@@ -35,3 +35,7 @@
 `git reset HEAD^` (已修改的檔案保留在working tree)   
 `git reset HEAD^ --soft` (已修改的檔案放到staging area)   
 `git reset HEAD^ --hard` (清除已修改的檔案)
+
+===
+* 清除無用git檔案,增進效能   
+`git gc`   
