@@ -85,3 +85,12 @@ var _videoControl = function(o) {
 	}
 }
 ```    
+
+======
+## some common questions
+
+### 傳送PHP字串(含有'或"的變數)給javascript變數接
+[參考](http://stackoverflow.com/questions/168214/pass-a-php-string-to-a-javascript-variable-and-escape-newlines)   
+```javascript
+var myvar = <?php echo json_encode($myVarValue); ?>;
+```
