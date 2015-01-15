@@ -6,7 +6,7 @@
    
 ===
 * 重設remote url   
-`git remote set-url <new-remote-url>`
+`git remote set-url <remote-name> <new-remote-url>`
 
 ===
 * 新增遠端儲存庫 _可以有很多個, e.g. origin origin2..._   
