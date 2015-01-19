@@ -61,6 +61,12 @@ var myName = {}; // new a empty object
 myName["name"] = "Ezreal";     <=>     myName.name = "Ezreal";
 ```
 
+### js的迴圈continue與break
+```javascript
+//在loop裡面
+return ;      // continue
+return false; // break
+```   
    
 
 =======
