@@ -14,14 +14,11 @@ CONFIGURATION
 
 * __NOTE__ The folder which is under app/web/money_admin/images and its files should be set as property:0777.
 
-* Database:   
-   
-
+* Database:
   |    url    | admin-account | admin-password |
   |:---------:|:-------------:|:--------------:|
   | 10.1.2.10 |      rd2      |     rd2rd2     |
-   
-      
+
 Use admin-account to create db-account for this app.
 
 DIRECTORY STRUCTURE
@@ -54,4 +51,3 @@ _Kettan Wu_
 _Leo Wang_
 
 _Rex Chen_
-
