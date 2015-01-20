@@ -18,7 +18,7 @@ CONFIGURATION
 |    url    | admin-account | admin-password |
 |:---------:|:-------------:|:--------------:|
 | 10.1.2.10 |      rd2      |     rd2rd2     |
-
+   
 Use admin-account to create db-account for this app.
 
 DIRECTORY STRUCTURE
