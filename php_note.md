@@ -52,6 +52,15 @@ echo $time;
 // 輸出2015-06-24
 ```
 
+### 時間戳記加減運算
+```php
+$a = '2015-01-20 07:00:00';
+$b = '2015-01-20 20:00:00';
+$c = strtotime($b)-strtotime($a);
+echo gmdate("H:i:s", $c);
+// 輸出13:00:00
+```
+
 ======
 ## some common questions
 
