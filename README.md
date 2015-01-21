@@ -15,6 +15,7 @@ CONFIGURATION
 * __NOTE__ The folders are under app/web/money_admin/images and theirs files should be set as property:0777.   
 * Check /www/money_admin/images has a folder named __newsBighead__, if not, create one.   
 * Database   
+
 >
 server: __Pro-money__ dbname: __money__   
 
