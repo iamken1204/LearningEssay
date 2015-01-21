@@ -17,7 +17,9 @@ CONFIGURATION
 * Database   
 
 >
-server: __Pro-money__ dbname: __money__   
+server: __Pro-money__ dbname: __money__ 
+
+>
 |       url       |       ac       |       pw       |     remark     |
 |:---------------:|:--------------:|:--------------:|:--------------:|
 |    10.1.2.10    |       rd2      |     rd2rd2     | For creating app's db account|
