@@ -72,12 +72,16 @@ var myvar = <?php echo json_encode($myVarValue); ?>;
 
 ### 操作 `cookie`、`session` 之前不能輸出網頁內容   
 如:
-不能`echo`   
+不能   
+```php
+echo 'aaa';
+setcookie(...);
+```   
 不能
 ```php
 <p>Hello</p>
 <?php
 setcookie(...);
 ?>
-```
+```   
 [參考](http://blog.xuite.net/vexed/tech/26406775-PHP+%E9%8C%AF%E8%AA%A4+-+headers+already+sent)
