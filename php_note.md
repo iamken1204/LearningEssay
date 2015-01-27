@@ -67,4 +67,17 @@ echo gmdate("H:i:s", $c);
 ### 傳送PHP字串(含有'或"的變數)給javascript變數接
 [參考](http://stackoverflow.com/questions/168214/pass-a-php-string-to-a-javascript-variable-and-escape-newlines)   
 ```javascript
-var myvar = <?php echo json_encode($myVarValue); ?>;
+var myvar = <?php echo json_encode($myVarValue); ?>;   
+```   
+
+### 操作 `cookie`、`session` 之前不能輸出網頁內容   
+如:
+不能`echo`
+不能
+```php
+<p>Hello</p>
+<?php
+setcookie(...);
+?>
+```
+[參考](http://blog.xuite.net/vexed/tech/26406775-PHP+%E9%8C%AF%E8%AA%A4+-+headers+already+sent)
