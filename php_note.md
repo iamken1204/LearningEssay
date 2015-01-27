@@ -71,7 +71,7 @@ var myvar = <?php echo json_encode($myVarValue); ?>;
 ```   
 
 ### 操作 `cookie`、`session` 之前不能輸出網頁內容   
-如:
+如:   
 不能   
 ```php
 echo 'aaa';
