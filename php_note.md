@@ -85,3 +85,11 @@ setcookie(...);
 ?>
 ```   
 [參考](http://blog.xuite.net/vexed/tech/26406775-PHP+%E9%8C%AF%E8%AA%A4+-+headers+already+sent)
+
+### 將array_unique過的陣列轉成json
+```php
+$a = array(1,2,2,3,3);
+$b = array_unique($a);                   // $b = [1,2,3]
+echo json_encode($b);                    // 輸出 {"0":1,"1":2,"3":3}
+echo json_encode(array_values($b));      // 輸出 [1,2,3]
+```
