@@ -93,3 +93,37 @@ $b = array_unique($a);                   // $b = [1,2,3]
 echo json_encode($b);                    // 輸出 {"0":1,"1":2,"3":3}
 echo json_encode(array_values($b));      // 輸出 [1,2,3]
 ```
+
+=====
+## Skills
+   
+### 在遞迴函式裡面使用靜態變數加快function的速度
+[參考](https://speakerdeck.com/jaceju/how-to-be-a-better-php-developer)
+```php
+function fib($n) {
+
+
+
+	if($n < 2)
+		return $n;
+	$f[$n] = fib($n-2) + fib($n-1);
+	return $f[$n];
+}
+
+echo fib(30), "\n";
+```
+上面這段`$f`為普通變數，執行時間__5.59556889534__秒   
+下面這段把`$f`宣告為為靜態變數，執行時間__0.002144813537__秒
+```php
+function fib($n) {
+	static $f = array();
+	if(isset($f[$n]))
+		return $f[$n];
+	if($n < 2)
+		return $n;
+	$f[$n] = fib($n-2) + fib($n-1);
+	return $f[$n];
+}
+
+echo fib(30), "\n";
+```
