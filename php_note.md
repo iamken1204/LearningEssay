@@ -127,3 +127,15 @@ function fib($n) {
 
 echo fib(30), "\n";
 ```
+
+### 在雙引號字串內印出變數
+```php
+$juice = 'orange';
+
+echo "I drank some juice made of $juices";    // 無法輸出$juice變數
+echo "I drank some juice made of {$juice}s";  // 輸出$juice變數
+
+// 也可以輸出陣列內容
+$juice = ['orange', 'apple', 'watermelon'];
+echo "I drank some juice made of {$juice[1]}s";
+```
