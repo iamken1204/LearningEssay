@@ -64,10 +64,12 @@ echo gmdate("H:i:s", $c);
 ======
 ## some common questions
 
-### 找到電腦中PHP的位置
+### 關於PHP
+* 電腦中PHP的位置
 ```shell
 $ which php
 ```
+* php.ini的路徑可以在`phpinfo();`內看到
 
 ### 傳送PHP字串(含有'或"的變數)給javascript變數接
 [參考](http://stackoverflow.com/questions/168214/pass-a-php-string-to-a-javascript-variable-and-escape-newlines)   
