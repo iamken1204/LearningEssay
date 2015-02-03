@@ -37,7 +37,8 @@
 `git reset HEAD^ --hard` (清除已修改的檔案)
 
 * 重回到上一個commit的狀態
-`git reset --hard`   恢復上一個commit後修改的檔案   
+`git reset --hard`   
+恢復上一個commit後修改的檔案   
 [參考](http://stackoverflow.com/questions/5807137/git-how-to-revert-uncommitted-changes-including-files-and-folders)
 
 ===
