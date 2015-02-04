@@ -68,6 +68,17 @@ return ;      // continue
 return false; // break
 ```   
    
+### 取得時間
+```javascript
+var d = new Date(),
+    year = d.getFullYear(),
+    mon = d.getMonth(),
+    day = d.getDate(),
+    h = d.getHours(),
+    i = d.getMinutes(),
+    s = d.getSeconds();
+```
+[參考](http://www.w3schools.com/jsref/jsref_obj_date.asp)
 
 =======
 ## Design Pattern
