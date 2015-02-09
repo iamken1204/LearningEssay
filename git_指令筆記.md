@@ -9,7 +9,7 @@
 `git remote set-url <remote-name> <new-remote-url>`
 
 ===
-* 新增遠端儲存庫 _可以有很多個, e.g. origin origin2..._   
+* 新增遠端儲存庫 __可以有很多個, e.g. origin origin2...__   
 `git remote add <remote_name> <remote_url>`
 
 ===
@@ -46,5 +46,5 @@
    
 ===
 * 修改最近一次尚未push的commit訊息   
-`git commit --amend -m [new_commit_message]`   
+`git commit --amend -m <new_commit_message>`   
 [參考](http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git)   
