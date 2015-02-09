@@ -43,3 +43,8 @@
 ===
 * 清除無用git檔案,增進效能   
 `git gc`   
+   
+===
+* 修改最近一次尚未push的commit訊息
+`git commit --amend -m [new_commit_message]`   
+[參考](http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git)   
