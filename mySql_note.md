@@ -4,11 +4,11 @@
 在where條件裡面可以再下其他查詢   
 ```mysql
 select *
-from  `NEWS_ARTICLE_CLICKS`
-where `NEWS_ID` in (
-	select news_id
-	from news_article
-	where rdatetime > '2015-01-01 00:00:00'
+from  `ARTICLE_CLICKS`
+where `ARTICLE_ID` in (
+	select article_id
+	from article
+	where datetime > '2015-01-01 00:00:00'
 )
-order by  `NEWS_ARTICLE_CLICKS`.`NEWS_ID` desc
+order by  `ARTICLE_CLICKS`.`ARTICLE_ID` desc
 ```
