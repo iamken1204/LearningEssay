@@ -1,6 +1,7 @@
 # MySQL note
 
-## 子查詢
+### 子查詢
+在where條件裡面可以再下其他查詢   
 ```mysql
 select *
 from  `NEWS_ARTICLE_CLICKS`
