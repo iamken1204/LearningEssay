@@ -59,6 +59,16 @@ $b = '2015-01-20 20:00:00';
 $c = strtotime($b)-strtotime($a);
 echo gmdate("H:i:s", $c);
 // 輸出13:00:00
+```   
+
+### 判斷一個變數是否為數字   
+```php
+$a = '123';
+$b = 123;
+$c = 'yam23';
+echo is_numeric($a); // 1
+echo is_numeric($b); // 1
+echo is_numeric($c); // 0
 ```
 
 ======
