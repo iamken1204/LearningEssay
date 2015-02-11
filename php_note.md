@@ -156,3 +156,33 @@ echo "I drank some juice made of {$juice}s";  // 輸出$juice變數
 $juice = ['orange', 'apple', 'watermelon'];
 echo "I drank some juice made of {$juice[1]}s";
 ```
+
+## 命名慣例
+
+### Class
+首字大寫   
+```php
+ConsoleController
+```
+
+### class' attribute
+開頭加個`m`，其他首字大寫
+```php
+class HelloController{
+    var $mStrAbc;
+    var $mHelloAttribute;
+}
+```
+
+### function
+首字大寫   
+```php
+function DoSomeThing(){}
+```
+
+### variable
+全小寫，使用`_`隔開   
+```php
+$first_string;
+$second_string;
+```
