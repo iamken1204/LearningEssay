@@ -2,6 +2,15 @@
 
 ## 語法
 
+### CLI(Command Line) Colors (bash)
+[Color code is here](http://www.if-not-true-then-false.com/2010/php-class-for-coloring-php-command-line-cli-scripts-output-php-output-colorizing-using-bash-shell-colors/)   
+```php
+echo "\033[0;31m Your messages\033[0m \n";
+// Use "\033" to tell php it's a color code.
+// "[0;31m" defines which color to show, in this case, the color is light red.
+// "[0m" tells php color code is stoped here, or you'll see all words be changed under your message.
+```
+
 ### `array_unique()`
 同index的重複value只保留一個   
 ```php
@@ -155,4 +164,34 @@ echo "I drank some juice made of {$juice}s";  // 輸出$juice變數
 // 也可以輸出陣列內容
 $juice = ['orange', 'apple', 'watermelon'];
 echo "I drank some juice made of {$juice[1]}s";
+```
+
+## 命名慣例
+
+### Class
+首字大寫   
+```php
+ConsoleController
+```
+
+### class' attribute
+開頭加個`m`，其他首字大寫
+```php
+class HelloController{
+    var $mStrAbc;
+    var $mHelloAttribute;
+}
+```
+
+### function
+首字大寫   
+```php
+function DoSomeThing(){}
+```
+
+### variable
+全小寫，使用`_`隔開   
+```php
+$first_string;
+$second_string;
 ```
