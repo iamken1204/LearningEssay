@@ -83,6 +83,20 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
+### 移除空白
+```php
+$str = " This line contains\tliberal \r\n use of whitespace.\n\n";
+
+// 移除前後空白字
+$str = trim($str);
+
+// 移除重覆的空白
+$str = preg_replace('/\s(?=\s)/', '', $str);
+
+// 移除非空白的間距變成一般的空白
+$str = preg_replace('/[\n\r\t]/', ' ', $str);
+```
+
 ### 關於PHP
 * 電腦中PHP的位置
 ```shell
