@@ -2,6 +2,27 @@
 
 ## 語法
 
+### parent
+If you override parent class' function and want to run with old function, use `parent::yourFunctionName();`   
+```php
+class A {
+	public function printing() {
+		echo "a.printing() ";
+	}
+}
+
+class B extends A {
+	public function printing() {
+		parent::printing();
+		echo "b.printing()";
+	}
+}
+
+$b = new B;
+$b->printing();
+// a.printing() b.printing()
+```
+
 ### CLI(Command Line) Colors (bash)
 [Color code is here](http://www.if-not-true-then-false.com/2010/php-class-for-coloring-php-command-line-cli-scripts-output-php-output-colorizing-using-bash-shell-colors/)   
 ```php
