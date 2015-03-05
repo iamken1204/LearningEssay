@@ -3,7 +3,7 @@
 ## 語法
 
 ### `on()`
-(參考)[http://www.ladesign.tw/paper/info/jquery_bind_delegate]
+[參考](http://www.ladesign.tw/paper/info/jquery_bind_delegate)
 
 
 ### `isNaN()`
