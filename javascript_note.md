@@ -2,6 +2,9 @@
 
 ## 語法
 
+### `on()`
+(參考)[http://www.ladesign.tw/paper/info/jquery_bind_delegate]
+
 
 ### `isNaN()`
 判斷是否"**不是數字**"   
