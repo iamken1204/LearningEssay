@@ -23,6 +23,12 @@ $b->printing();
 // a.printing() b.printing()
 ```
 
+### getcwd()
+取得目前執行之檔案的絕對路徑
+```php
+echo getcwd();
+```
+
 ### CLI(Command Line) Colors (bash)
 [Color code is here](http://www.if-not-true-then-false.com/2010/php-class-for-coloring-php-command-line-cli-scripts-output-php-output-colorizing-using-bash-shell-colors/)   
 ```php
