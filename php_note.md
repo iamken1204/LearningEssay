@@ -163,6 +163,14 @@ echo json_encode(array_values($b));      // 輸出 [1,2,3]
 
 =====
 ## Skills
+
+### 傳送變數至Closure(anonymous funciton)裡
+[參考](http://laravel.io/forum/03-10-2014-laravel-mailsend-does-not-appear-to-accept-variables)
+```php
+// 在function(...)後面加上use($parameter_you_want)
+$name = 'Name';
+Mail::send('email.view', [...], function($message) use($name){...}));
+```
    
 ### 在遞迴函式裡面使用靜態變數加快function的速度
 [參考](https://speakerdeck.com/jaceju/how-to-be-a-better-php-developer)
