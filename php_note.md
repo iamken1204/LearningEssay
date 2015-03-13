@@ -169,7 +169,7 @@ echo json_encode(array_values($b));      // 輸出 [1,2,3]
 ```php
 // 在function(...)後面加上use($parameter_you_want)
 $name = 'Name';
-Mail::send('email.view', [...], function($message) use($name){...}));
+Mail::send('email.view', [...], function($message) use($name) {...}));
 ```
    
 ### 在遞迴函式裡面使用靜態變數加快function的速度
