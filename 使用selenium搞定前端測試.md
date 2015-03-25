@@ -16,5 +16,7 @@
 * [PHPUnit](https://phpunit.de)官方4.5版已內建phpunit-selenium
    
 * 測試流程：
-  1. 開啟selenium server
+  1. 開啟selenium server `$ java -jar selenium-server-standalone-2.45.0.jar`
   2. `$ phpunit your_test.php`
+  
+
