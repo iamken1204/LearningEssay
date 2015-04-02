@@ -1,4 +1,4 @@
-# Laravel's server set for Nginx
+# Laravel5's server set for Nginx
 
 ```
 server {
