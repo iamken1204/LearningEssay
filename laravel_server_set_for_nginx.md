@@ -3,12 +3,12 @@
 ```
 server {
 
-	server_name laravel5.kettan.com;
+	server_name motc.s2.com;
 
-	access_log /home/kettan_wu/laravel5.test/host/log/access.log;
-	error_log /home/kettan_wu/laravel5.test/host/log/error.log;
+	access_log /home/kettan_wu/motc.s2.com/host/log/access.log;
+	error_log /home/kettan_wu/motc.s2.com/host/log/error.log;
 
-	root /home/kettan_wu/laravel5.test/www/public;
+	root /home/kettan_wu/motc.s2.com/www/public;
 	index index.php;
 
 	location / {
