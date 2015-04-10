@@ -131,6 +131,10 @@ $ which php
 ```
 * php.ini的路徑可以在`phpinfo();`內看到
 
+### PHP session id
+安裝PHP後，PHP compiler會根據該電腦的CPU內核(內核ID每個CPU獨一無二)與其他數據做出__session id__   
+php session id是可以重設的，php compiler預設的php session id就叫php session id
+
 ### 傳送PHP字串(含有'或"的變數)給javascript變數接
 [參考](http://stackoverflow.com/questions/168214/pass-a-php-string-to-a-javascript-variable-and-escape-newlines)   
 ```javascript
