@@ -63,10 +63,10 @@ $array = [
 ];
 $rearrange = array_values($array);
 // $rearrange = [
-     0 => 1,
-     1 => 2,
-     2 => 3
-   ]
+//   0 => 1,
+//   1 => 2,
+//   2 => 3
+// ]
 ```
 
 ### `json_decode()` 取回(陣列|物件)的方法   
