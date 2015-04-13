@@ -53,6 +53,22 @@ $b1 = array_unique($b);
 // ]
 ```
 
+### `array_values()`
+把陣列的index重新訂為0~   
+```php
+$array = [
+  'c' => 1,
+  'b' => 2,
+  'z' => 3
+];
+$rearrange = array_values($array);
+// $rearrange = [
+     0 => 1,
+     1 => 2,
+     2 => 3
+   ]
+```
+
 ### `json_decode()` 取回(陣列|物件)的方法   
 ```php
 json_decode($jString);         #回傳物件
