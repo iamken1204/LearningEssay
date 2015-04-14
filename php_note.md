@@ -200,6 +200,7 @@ Mail::send('email.view', [...], function($message) use($name) {...});
 ```
 
 ### 使用php重新整理(或跳轉)頁面
+[參考](http://stackoverflow.com/questions/12383371/refresh-a-page-using-php)   
 ```php
 echo "<meta http-equiv='refresh' content='0; url='http://www.google.com'>";
 ```
