@@ -198,6 +198,12 @@ echo json_encode(array_values($b));      // 輸出 [1,2,3]
 $name = 'Name';
 Mail::send('email.view', [...], function($message) use($name) {...});
 ```
+
+### 使用php重新整理(或跳轉)頁面
+```php
+echo "<meta http-equiv='refresh' content='0; url='http://www.google.com'>";
+```
+這裡的0代表0秒跳轉   
    
 ### 在遞迴函式裡面使用靜態變數加快function的速度
 [參考](https://speakerdeck.com/jaceju/how-to-be-a-better-php-developer)
