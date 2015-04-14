@@ -6,7 +6,7 @@
 [參考](http://www.ladesign.tw/paper/info/jquery_bind_delegate)
 
 ### 取得cookie
-[參考](http://stackoverflow.com/questions/10730362/get-cookie-by-name)
+[參考](http://stackoverflow.com/questions/10730362/get-cookie-by-name)   
 原生js取得cookie的方式是`document.cookie`，但是這樣會取回字串，很不方便   
 如果不想用lib，想用原生方式以key取值的話：
 ```javascript
