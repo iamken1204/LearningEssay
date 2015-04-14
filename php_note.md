@@ -75,6 +75,12 @@ json_decode($jString);         #回傳物件
 json_decode($jString, true);   #回傳陣列
 ```
 
+### 刪除一個已存在的cookie
+```php
+if(isset($_COOKIE['login']))
+    setcookie('login', null, -1);
+```
+
 ### `unset()`
 清除陣列
 ```php
