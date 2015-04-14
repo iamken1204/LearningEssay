@@ -5,6 +5,19 @@
 ### `on()`
 [參考](http://www.ladesign.tw/paper/info/jquery_bind_delegate)
 
+### 取得cookie
+[參考](http://stackoverflow.com/questions/10730362/get-cookie-by-name)
+原生js取得cookie的方式是`document.cookie`，但是這樣會取回字串，很不方便   
+如果不想用lib，想用原生方式以key取值的話：
+```javascript
+function getCookie(name) {
+	var value = "; " + document.cookie;
+	var parts = value.split("; " + name + "=");
+	if (parts.length == 2)
+		return parts.pop().split(";").shift();
+}
+```
+
 
 ### `isNaN()`
 判斷是否"**不是數字**"   
