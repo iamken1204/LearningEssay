@@ -76,6 +76,7 @@ json_decode($jString, true);   #回傳陣列
 ```
 
 ### 刪除一個已存在的cookie
+[參考](http://stackoverflow.com/questions/686155/remove-a-cookie)
 ```php
 if(isset($_COOKIE['login']))
     setcookie('login', null, -1);
