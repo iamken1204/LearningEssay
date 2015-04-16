@@ -205,6 +205,15 @@ Mail::send('email.view', [...], function($message) use($name) {...});
 echo "<meta http-equiv='refresh' content='0; url='http://www.google.com'>";
 ```
 這裡的0代表0秒跳轉   
+還有另一個是`header()`，使用`header()`前頁面不能有任何輸出如`echo()`, `print_f()`等等   
+```php
+header("Location: http://www.google.com");
+```
+不過最方便的還是用js...   
+```php
+$url = 'www.google.com';
+echo "<script>window.location.replace('$url');</script>";
+```
    
 ### 在遞迴函式裡面使用靜態變數加快function的速度
 [參考](https://speakerdeck.com/jaceju/how-to-be-a-better-php-developer)
