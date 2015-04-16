@@ -99,6 +99,27 @@ var d = new Date(),
 =======
 ## Design Pattern
 
+### object pattern
+```javascript
+$(function() {
+	var youtubeList = function(o) {
+		var self = o;
+		var init = function() {
+			self.$el = $(self.el);
+			self.$el.find('.btn').each(function(idx, obj) {
+				conosle.log($(this));
+			});
+			return self;
+		}
+		o.hello = function() {
+			alert('a');
+		}
+		return init();
+	}({el:'#test', target: 'aaaaa'});
+	youtubeList.hello();
+});
+```
+
 ### Cache -1
 在物件裡面,cache的方式   
 先用`$panel`記住`$('.panel-body')`這個區塊,之後用`$panel.find`找裡面的dom   
