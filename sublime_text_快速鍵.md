@@ -1,5 +1,9 @@
 # Sublime Text 快速鍵 ლ(◕‿‿◕ლ)
 
+## 呼叫控制器
+`⌘ + shift + p` __mac__   
+`ctrl + shift + p` __windows__   
+
 ## Editing
 
 `⌘ + ~`				開啓/關閉檔案路徑
