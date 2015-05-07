@@ -287,3 +287,34 @@ function DoSomeThing(){}
 $first_string;
 $second_string;
 ```
+
+## Coding Style
+
+### PSR-2
+[參考](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
+
+* 純php檔案的結尾__一定__不要有`?>`
+* 檔案結束後最下方__一定__要有一行空白
+* 縮排__一定__要用空白，__一定不能__用tab
+* class名稱宣告完成後左大括號__一定__要在其下一行，右大括號__一定__要在程式本體結束的下一行
+* class的屬性與方法__一定__要宣告可視屬性`public, private, protected...`
+* function名稱與params__一定__要連在一起，其後左大括號__一定__要在其下一行，右大括號__一定__要在方法本體結束的下一行
+```php
+<?php
+
+class SomeClass
+{
+    public $ParamA = null;
+    
+    public $ParamB = false;
+    
+    public function __construct($p1, $p2, $p3 = [])
+    {
+        // do something
+    }
+}
+
+```
+
+
+
