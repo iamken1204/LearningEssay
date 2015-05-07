@@ -5,14 +5,18 @@
 ### parent
 If you override parent class' function and want to run with old function, use `parent::yourFunctionName();`   
 ```php
-class A {
-	public function printing() {
+class A
+{
+	public function printing()
+	{
 		echo "a.printing() ";
 	}
 }
 
-class B extends A {
-	public function printing() {
+class B extends A
+{
+	public function printing()
+	{
 		parent::printing();
 		echo "b.printing()";
 	}
@@ -103,10 +107,10 @@ $time = date("ah:i:s");
 [參考](http://stackoverflow.com/questions/10724305/how-to-add-1-month-on-a-date-without-skipping-i-e-february)
 ```php
 $time = "2014-12-24";
-$addMon = 3;
-$preTime = $time;
-$nextTime = strtotime("+$addMon month", strtotime($preTime));
-$time = date("Y-m-d", $nextTime);
+$add_mon = 3;
+$pre_time = $time;
+$next_time = strtotime("+$add_mon month", strtotime($pre_time));
+$time = date("Y-m-d", $next_time);
 echo $time;
 // 輸出2015-06-24
 ```
@@ -218,7 +222,8 @@ echo "<script>window.location.replace('$url');</script>";
 ### 在遞迴函式裡面使用靜態變數加快function的速度
 [參考](https://speakerdeck.com/jaceju/how-to-be-a-better-php-developer)
 ```php
-function fib($n) {
+function fib($n)
+{
 
 
 
@@ -233,7 +238,8 @@ echo fib(30), "\n";
 上面這段`$f`為普通變數，執行時間__5.59556889534__秒   
 下面這段把`$f`宣告為為靜態變數，執行時間__0.002144813537__秒
 ```php
-function fib($n) {
+function fib($n)
+{
 	static $f = array();
 	if(isset($f[$n]))
 		return $f[$n];
@@ -269,16 +275,17 @@ ConsoleController
 ### class' attribute
 開頭加個`m`，其他首字大寫
 ```php
-class HelloController{
+class HelloController
+{
     var $mStrAbc;
     var $mHelloAttribute;
 }
 ```
 
 ### function
-首字大寫   
+首字小寫，其後駝峰式   
 ```php
-function DoSomeThing(){}
+function doSomeThing(){}
 ```
 
 ### variable
