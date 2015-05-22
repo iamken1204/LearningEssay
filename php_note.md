@@ -203,6 +203,11 @@ $name = 'Name';
 Mail::send('email.view', [...], function($message) use($name) {...});
 ```
 
+### php://input
+[參考](http://stackoverflow.com/ques…/8893574/php-php-input-vs-post)   
+`php://input` returns all the raw data after the HTTP-headers of the request.   
+If you have a __ajax__ request with __JSON__ data, you can use `file_get_contents("php://input");` to get data.
+
 ### 使用php重新整理(或跳轉)頁面
 [參考](http://stackoverflow.com/questions/12383371/refresh-a-page-using-php)   
 ```php
