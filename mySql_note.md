@@ -12,3 +12,18 @@ where `ARTICLE_ID` in (
 )
 order by  `ARTICLE_CLICKS`.`ARTICLE_ID` desc
 ```
+
+### 減少更新資料時的query次數
+
+```mysql
+-- transaction start --
+SELECT `example` FROM `test` WHERE ID = :ID;
+UPDATE `test` SET `example` = n WHERE ID = :ID;
+-- commit transaction --
+
+-- 可以變成↓ --
+
+-- transaction start --
+UPDATE `test` SET `example` = `example` - '1' WHERE `example` > 0;
+-- commit transaction 
+```
