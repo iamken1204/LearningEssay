@@ -149,7 +149,7 @@ var _videoControl = function(o) {
 var myvar = <?php echo json_encode($myVarValue); ?>;
 ```
 
-### set default select opiton by jQuery
+### set default select option by jQuery
 [ref](http://stackoverflow.com/questions/13343566/set-select-option-selected-by-value)
 ```html
 <div class="group">
