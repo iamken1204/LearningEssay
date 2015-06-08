@@ -148,3 +148,17 @@ var _videoControl = function(o) {
 ```javascript
 var myvar = <?php echo json_encode($myVarValue); ?>;
 ```
+
+### set default select opiton by jQuery
+[ref](http://stackoverflow.com/questions/13343566/set-select-option-selected-by-value)
+```html
+<div class="group">
+  <select>
+    <option>A</option>
+    <optin>B</option>
+  </select>
+</div
+```
+```javascript
+$('div.group select').val('B');
+```
