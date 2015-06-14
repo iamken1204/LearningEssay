@@ -1,0 +1,11 @@
+# AWS
+
+## EC2
+
+### new a ubuntu instance with PHP server
+1. Create a instance, checkout the 'free tier' box
+2. Donwload the instance's __private key pair__
+3. Wait minutes... till the instance is running.
+4. Click 'Connect' button
+5. `chmod 400 your_private_key.pem`
+6. `ssh -i your_private_key.pem ubuntu@your.instance.public.ip`, done!
