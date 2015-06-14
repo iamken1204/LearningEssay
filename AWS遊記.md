@@ -9,3 +9,5 @@
 4. Click 'Connect' button
 5. `chmod 400 your_private_key.pem`
 6. `ssh -i your_private_key.pem ubuntu@your.instance.public.ip`, done!
+   
+Note: There is recommend that you install composer into path: `/use/local/bin`
