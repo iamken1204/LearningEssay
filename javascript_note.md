@@ -6,7 +6,7 @@
 [ref](http://stackoverflow.com/questions/1789945/how-can-i-check-if-one-string-contains-another-substring)
 ```javascript
 var str = 'foo';
-console.log(str.includes('00'));
+console.log(str.includes('oo'));
 // output true
 ```
 
