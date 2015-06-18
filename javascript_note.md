@@ -2,6 +2,14 @@
 
 ## 語法
 
+### `includes()` 尋找某字串是否內含字串
+[ref](http://stackoverflow.com/questions/1789945/how-can-i-check-if-one-string-contains-another-substring)
+```javascript
+var str = 'foo';
+console.log(str.includes('00'));
+// output true
+```
+
 ### `on()`
 [參考](http://www.ladesign.tw/paper/info/jquery_bind_delegate)
 
