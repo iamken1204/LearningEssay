@@ -34,7 +34,7 @@ echo getcwd();
 ```
 
 ### curl
-issue a post request example
+example of issuing a post request
 ```php
 $cu = curl_init();
 $url = 'http://kettan.dev.com/admin/post/category/test';
