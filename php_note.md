@@ -33,6 +33,25 @@ $b->printing();
 echo getcwd();
 ```
 
+### curl
+issue a post request example
+```php
+$cu = curl_init();
+$url = 'http://kettan.dev.com/admin/post/category/test';
+$data = [
+    'name' => 'Kettan',
+    // ...
+];
+$options = [
+    CURLOPT_URL => $url,
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => $data,
+];
+curl_setopt_array($cu, $options);
+curl_exec($cu);
+curl_close($cu);
+```
+
 ### CLI(Command Line) Colors (bash)
 [Color code is here](http://www.if-not-true-then-false.com/2010/php-class-for-coloring-php-command-line-cli-scripts-output-php-output-colorizing-using-bash-shell-colors/)   
 ```php
