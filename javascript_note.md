@@ -155,6 +155,9 @@ var _videoControl = function(o) {
 [ref](http://stackoverflow.com/questions/2202269/best-way-to-add-dom-elements-with-jquery)
 ```javascript
 $('<input/>', {
+	id: 'user_id',
+	name: 'user_id',
+	value: $('input[name=ui]').attr('data-xx')
 }).appendTo('form');
 ```
 
