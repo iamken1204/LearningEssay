@@ -151,6 +151,13 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+### add DOM by jQuery
+[ref](http://stackoverflow.com/questions/2202269/best-way-to-add-dom-elements-with-jquery)
+```javascript
+$('<input/>', {
+}).appendTo('form');
+```
+
 ### 傳送PHP字串(含有'或"的變數)給javascript變數接
 [參考](http://stackoverflow.com/questions/168214/pass-a-php-string-to-a-javascript-variable-and-escape-newlines)   
 ```javascript
