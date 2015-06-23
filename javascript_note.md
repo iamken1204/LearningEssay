@@ -2,12 +2,20 @@
 
 ## 語法
 
-### `includes()` 尋找某字串是否內含字串
+### `includes()` `test()` 尋找某字串是否內含字串
 [ref](http://stackoverflow.com/questions/1789945/how-can-i-check-if-one-string-contains-another-substring)
 ```javascript
 var str = 'foo';
 console.log(str.includes('oo'));
 // output true
+```
+__OR__ use regular expression to search
+```javascript
+var ur1 = 'http://hello.com',
+    ur2 = 'Ehttp://hello.co';
+/^http.*/.test(ur1);  // true
+/^http.*/.test(ur2);  // false
+/.*http.*/.test(ur2); // true
 ```
 
 ### `on()`
