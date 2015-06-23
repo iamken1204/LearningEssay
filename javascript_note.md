@@ -12,7 +12,7 @@ console.log(str.includes('oo'));
 __OR__ use regular expression to search
 ```javascript
 var ur1 = 'http://hello.com',
-    ur2 = 'Ehttp://hello.co';
+    ur2 = 'shttp://hello.co';
 /^http.*/.test(ur1);  // true    the '^' means there are no words before target word
 /^http.*/.test(ur2);  // false   the '.*' means can be any words
 /.*http.*/.test(ur2); // true
