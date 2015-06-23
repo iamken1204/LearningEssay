@@ -13,8 +13,8 @@ __OR__ use regular expression to search
 ```javascript
 var ur1 = 'http://hello.com',
     ur2 = 'Ehttp://hello.co';
-/^http.*/.test(ur1);  // true
-/^http.*/.test(ur2);  // false
+/^http.*/.test(ur1);  // true    the '^' means there are no words before target word
+/^http.*/.test(ur2);  // false   the '.*' means can be any words
 /.*http.*/.test(ur2); // true
 ```
 
