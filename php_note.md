@@ -171,8 +171,8 @@ $str = preg_replace('/[\n\r\t]/', ' ', $str);
 ```
 
 ### minutes convert to hours and minutes
-[ref](http://stackoverflow.com/questions/8563535/convert-number-of-minutes-into-hours-minutes-using-php)
-[`mktime()`](http://php.net/manual/en/function.mktime.php)
+[ref](http://stackoverflow.com/questions/8563535/convert-number-of-minutes-into-hours-minutes-using-php)   
+[`mktime()`](http://php.net/manual/en/function.mktime.php)   
 ```php
 date("h:i", mktime(0, $yourMinuteInteger));
 ```
