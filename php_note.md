@@ -2,6 +2,13 @@
 
 ## 語法
 
+### calling class' function by variable
+```php
+call_user_func([$this, $your_function_name]);
+// or
+$this->{$your_function_name}();
+```
+
 ### parent
 If you override parent class' function and want to run with old function, use `parent::yourFunctionName();`   
 ```php
