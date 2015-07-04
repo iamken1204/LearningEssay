@@ -2,7 +2,7 @@
 
 ## 語法
 
-### calling class' function by variable
+### calling class' function by string
 ```php
 call_user_func([$this, $your_function_name]);
 // or
