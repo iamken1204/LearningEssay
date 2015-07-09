@@ -369,7 +369,14 @@ class SomeClass
 
 ### fb.ui share
 
-##### error message: `An error occurred. Please try again later.` or `應用程式的設定不接受這個網址。: 應用程式的設定不接受所提供之一或多個網址。網址必須符合網站網址或畫布（Canvas）應用程式網址；或者，網域必須是應用程式網域的子網域之一`
+##### error message:
+```
+An error occurred. Please try again later.
+```
+__or__
+```
+應用程式的設定不接受這個網址。: 應用程式的設定不接受所提供之一或多個網址。網址必須符合網站網址或畫布（Canvas）應用程式網址；或者，網域必須是應用程式網域的子網域之一
+```
 __facebook API Version v2.3__   
 [ref](http://sigmundtzeng.blogspot.tw/2015/07/herokuappfbgoogle.html)   
 [ref2 (check the most thumbed answer)](http://stackoverflow.com/questions/16415060/specify-multiple-redirect-uris-for-facebook-oauth2)   
