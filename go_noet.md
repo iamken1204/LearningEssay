@@ -28,12 +28,12 @@ fmt.Println(posts[0].title)
 > If you want to develop a web app by golang, there is a localhost server called `goapp` which were made by Google.[(for more info, check here)](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)   
 
 __How to use__   
-1. [Install go app](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)
+1. [Install go app](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)   
 2. `$ cd $GOPATH/path/to/your/app/`
-__example: `$ cd $GOPATH/src/github.com/gin-gonic/gin/examples/`__
+__example: `$ cd $GOPATH/src/github.com/gin-gonic/gin/examples/`__   
 3. `$ goapp serve your_app_folder_name`
-__example: `$ goapp serve app-engine/`__
-4. open `localhost:8080`
+__example: `$ goapp serve app-engine/`__   
+4. open `localhost:8080`   
 
 * Google App Engine is in `localhost:8000`
 * goapp is in `localhost:8080` by default
