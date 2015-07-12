@@ -30,9 +30,9 @@ fmt.Println(posts[0].title)
 __How to use__   
 1. [Install go app](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)
 2. `$ cd $GOPATH/path/to/your/app/`
-> example: `$ cd $GOPATH/src/github.com/gin-gonic/gin/examples/`
+__example: `$ cd $GOPATH/src/github.com/gin-gonic/gin/examples/`__
 3. `$ goapp serve your_app_folder_name`
-> example: `$ goapp serve app-engine/`
+__example: `$ goapp serve app-engine/`__
 4. open `localhost:8080`
 
 * Google App Engine is in `localhost:8000`
