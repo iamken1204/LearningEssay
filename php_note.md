@@ -143,7 +143,13 @@ echo $time;
 
 ### 計算剩餘天數
 ```php
-$countdownDays = ceil( (strtotime("2016-01-01") - time()) / 86400 );
+$dueDate = "2016-01-01";
+$now = time();
+$countdownDays = ceil( (strtotime($dueDate) - $now) / 86400 );
+$s = '';
+if ($countdownDays > 1)
+    $s  = 's';
+echo "There is {$countdownDays}day{$s} till $dueDate."
 ```
 
 ### 時間戳記加減運算
