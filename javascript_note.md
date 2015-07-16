@@ -159,6 +159,31 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+### redo event after some validation stuff
+```javascript
+// form validateion function
+var validateForm = function() {
+    if (somethingWentWrong)
+        return false;
+    return true;
+};
+
+// submititon flag
+success = false;
+
+$('#submit-button').on('click', function(e) {
+    // reset flag
+    if (success === true) {
+        success = false;
+        return;
+    }
+    e.preventDefault();
+    success = validateForm();
+    if (success) 
+        $(this).trigger('click');
+});
+```
+
 ### add DOM by jQuery
 [ref](http://stackoverflow.com/questions/2202269/best-way-to-add-dom-elements-with-jquery)
 ```javascript
