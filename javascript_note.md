@@ -163,8 +163,10 @@ var _videoControl = function(o) {
 ```javascript
 // form validateion function
 var validateForm = function() {
-    if (somethingWentWrong)
+    if (somethingWentWrong) {
+        alert('you made a mistake!');
         return false;
+    }
     return true;
 };
 
