@@ -174,6 +174,16 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
+### print out code's executing time
+```php
+function example() {
+    // bla bla...
+}
+example();
+$time = microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'];
+echo "It spent $time in function calls\n";
+```
+
 ### 移除空白
 ```php
 $str = " This line contains\tliberal \r\n use of whitespace.\n\n";
