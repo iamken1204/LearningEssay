@@ -37,3 +37,21 @@ __example: `$ goapp serve app-engine/`__
 
 * Google App Engine is in `localhost:8000`
 * goapp is in `localhost:8080` by default
+
+### multiple insert
+[ref(see the most pushed-up answer)](http://stackoverflow.com/questions/12486436/golang-how-do-i-batch-sql-statements-with-package-database-sql)
+```go
+func BulkInsert(unsavedRows []*ExampleRowStruct) error {
+    valueStrings := make([]string, 0, len(unsavedRows))
+    valueArgs := make([]interface{}, 0, len(unsavedRows) * 3)
+    for _, post := range unsavedRows {
+        valueStrings = append(valueStrings, "(?, ?, ?)")
+        valueArgs = append(valueArgs, post.Column1)
+        valueArgs = append(valueArgs, post.Column2)
+        valueArgs = append(valueArgs, post.Column3)
+    }
+    stmt := fmt.Sprintf("INSERT INTO my_sample_table (column1, column2, column3) VALUES %s", strings.Join(valueStrings, ","))
+    _, err := db.Exec(stmt, valueArgs...)
+    return err
+}
+```
