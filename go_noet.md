@@ -1,5 +1,24 @@
 # GO language
 
+### golang's basic types
+```
+bool
+
+string
+
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // uint8 的別名
+
+rune // int32 的別名
+     // 代表一個Unicode碼
+
+float32 float64
+
+complex64 complex128
+```
+
 ### add items into array dynamically
 ```go
 // declare an empty array
