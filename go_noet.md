@@ -57,7 +57,7 @@ func BulkInsert(unsavedRows []*ExampleRowStruct) error {
 ```
 
 ### about `_`
-All values you had declared __must__ be used in golang. If the return value from a func you will not use at this time, you can declared the value as `_` to tell golang to ignore it.
+All values you had declared __must__ be used in golang. If the return value from a func you will not use at this time, you can declare the value as `_` to tell golang to ignore it.
 ```go
 func test(val int) (int, int) {
     x = val * 99
