@@ -17,3 +17,6 @@ __NOTE__ There is no space between `-p`and it's password
 * Send command to MySQL   
 `[MySQL command]`   
 `\G`   
+
+## start, stop and restart MySql
+[ref](http://coolestguidesontheplanet.com/start-stop-mysql-from-the-command-line-terminal-osx-linux/)
