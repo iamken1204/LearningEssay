@@ -90,3 +90,24 @@ func main() {
     // The value is 9900.
 }
 ```
+
+### go version php's `var_dump()`
+```go
+import fmt
+
+var (
+    ten    int  = 10
+    DoWork bool = true
+)
+
+func main() {
+    const pattern = "%T(%v)\n"
+    fmt.Printf(pattern, 10, 10)
+    fmt.Printf(pattern, DoWork, DoWork)
+    // output:
+    // int(10)
+    // bool(true)
+    // %T will output paremeter's type
+    // %v will output paremeter's value
+}
+```
