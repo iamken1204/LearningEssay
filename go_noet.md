@@ -111,3 +111,46 @@ func main() {
     // %v will output paremeter's value
 }
 ```
+
+### about `for`
+* basic `for`
+```go
+func main() {
+    sum := 0
+    for i := 0; i < 10; i++ {
+        sum += i
+    }
+    fmt.Println(sum)
+}
+// output:
+// 45
+```
+* `for` can omit the __first__ and the __final__ parameters
+```go
+func main() {
+    sum := 1
+    for ; sum < 10; {
+        fmt.Println(sum)
+        sum += sum
+    }
+    fmt.Println(sum)
+}
+// output:
+// 1
+// 2
+// 4
+// 8
+// 16
+```
+* `for` is golang's `while`, either
+```go
+func main() {
+    sum := 1
+    for sum < 1000 {
+        sum += sum
+    }
+    fmt.Println(sum)
+}
+// output:
+// 1024
+```
