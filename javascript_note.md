@@ -159,6 +159,15 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+### trigger an event by jQuery
+[reference](http://stackoverflow.com/questions/20928915/jquery-triggerclick-not-working)
+```javascript
+// trigger a click event
+if (isLogin) {
+	$('.login-button')[0].click();
+}
+```
+
 ### redo event after some validation stuff
 ```javascript
 // form validateion function
