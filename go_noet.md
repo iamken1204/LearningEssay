@@ -154,3 +154,26 @@ func main() {
 // output:
 // 1024
 ```
+
+### about `if` `else`
+There can place a single-line operation efore judement in golang's `if`
+```go
+func test(x, y int) string {
+    ref := ""
+    // the v parameter can use in if operation only
+    if v := x - y; v > 0 {
+        ref = "x>y"
+    } else if v == 0 {
+        ref = "x=y"
+    } else {
+        ref = "x<y"
+    }
+    return ref
+}
+
+func main() {
+    fmt.Println(test(10, 10))
+    // output:
+    // x=y
+}
+```
