@@ -156,7 +156,7 @@ func main() {
 ```
 
 ### about `if` `else`
-There can place a single-line operation efore judement in golang's `if`
+There can place a single-line operation before judgement in golang's `if`
 ```go
 func test(x, y int) string {
     ref := ""
