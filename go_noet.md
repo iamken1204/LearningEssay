@@ -32,7 +32,7 @@ fmt.Println(arr[1])
 ### declare a map(like php's key-value array)
 ```go
 type Post struct {
-    id      integer
+    id      int
     title   string
     context string
 }
