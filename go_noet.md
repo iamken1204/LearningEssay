@@ -19,7 +19,21 @@ float32 float64
 complex64 complex128
 ```
 
-### add items into array dynamically
+### about `array`
+
+###### declare an array
+```go
+func main() {
+	var a [2]string
+	a[0] = "Hello"
+	a[1] = "World"
+	fmt.Println(a[0], a[1])
+	fmt.Println(a)
+}
+
+```
+
+###### add items into array dynamically
 ```go
 // declare an empty array
 arr := []int{}
@@ -28,6 +42,8 @@ arr = append(arr, 55)
 arr = append(arr, 99)
 fmt.Println(arr[1])
 ```
+
+===
 
 ### about `struct`
 
@@ -60,6 +76,24 @@ func main() {
 }
 // output:
 // {1000000000 2}
+```
+
+###### `new()`
+`v := new(Vertex)` eaquls to `var v *T = new(Vertex)`
+```go
+type Vertex struct {
+    X, Y int
+}
+
+func main() {
+    v := new(Vertex)
+    fmt.Println(v)
+    v.X, v.Y = 11, 9
+    fmt.Println(v)
+}
+// output:
+// &{0, 0}
+// &{11, 9}
 ```
 
 ===
