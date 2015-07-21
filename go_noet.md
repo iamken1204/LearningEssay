@@ -29,7 +29,7 @@ arr = append(arr, 99)
 fmt.Println(arr[1])
 ```
 
-### declare a map(like php's key-value array)
+### declare a struct(like php's key-value array)
 ```go
 type Post struct {
     id      int
