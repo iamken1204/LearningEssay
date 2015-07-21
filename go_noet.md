@@ -29,7 +29,9 @@ arr = append(arr, 99)
 fmt.Println(arr[1])
 ```
 
-### declare a struct(like php's key-value array)
+### about `struct`
+
+###### declare a struct(like php's key-value array)
 ```go
 type Post struct {
     id      int
@@ -42,6 +44,25 @@ posts := []Post{p1, p2}
 fmt.Println(posts[0].title)
 // out put I am
 ```
+
+###### struct pointer
+```go
+type Vertex struct {
+    X int
+    Y int
+}
+
+func main() {
+    p := Vertex{1, 2}
+    q := &p
+    q.X = 1e9
+    fmt.Println(p)
+}
+// output:
+// {1000000000 2}
+```
+
+===
 
 ### `goapp`
 > If you want to develop a web app by golang, there is a localhost server called `goapp` which were made by Google.[(for more info, check here)](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)   
