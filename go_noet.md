@@ -295,3 +295,23 @@ func main() {
     // x=y
 }
 ```
+
+### golang's foreach `range `
+```go
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+func main() {
+	for idx, val := range pow {
+		fmt.Printf("index = %d, value = %d\n", idx, val)
+	}
+}
+// output:
+// index = 0, value = 1
+// index = 1, value = 2
+// index = 2, value = 4
+// index = 3, value = 8
+// index = 4, value = 16
+// index = 5, value = 32
+```
+* ignore index, declare as `for _, val := range pow {}`
+* ignore value, declare as `for idx := range pow {}`
