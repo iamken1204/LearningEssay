@@ -49,6 +49,21 @@ func main() {
 
 ```
 
+###### declare a two-dimensional array
+```go
+func main() {
+	a := make([][]int, 10)
+	fmt.Printlnl(a)
+	// output:
+	// [[] [] [] [] [] [] [] [] [] []]
+	// as above, the array a's default value is nil and cannot be used
+	a[0] = make([]int, 10))
+	fmt.Printlnl(a)
+	// output:
+	// [[0 0 0 0 0 0 0 0 0 0] [] [] [] [] [] [] [] [] []]
+}
+```
+
 ###### add items into array dynamically
 ```go
 // declare an empty array
