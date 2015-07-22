@@ -43,6 +43,30 @@ arr = append(arr, 99)
 fmt.Println(arr[1])
 ```
 
+###### slicing arrays
+The expression `s[low:high]` evaluates to a slice of the elements from low through high-1, inclusive.
+```go
+func main() {
+	s := []int{1, 2, 3, 4, 5, 6}
+	fmt.Println("s ==", s)
+	// output:
+	// s == [1 2 3 4 5 6]
+	fmt.Println("s[1:4] ==", s[1:4])
+	// output:
+	// s[1:4] == [2, 3, 4]
+
+	// missing low index implies 0
+	fmt.Println("s[:3] ==", s[:3])
+	// output:
+	// s[:3] == [1 2 3]
+
+	// missing high index implies len(s)
+	fmt.Println("s[4:] ==", s[4:])
+	// output:
+	// ss[4:] == [5 6]
+}
+```
+
 ===
 
 ### about `struct`
