@@ -19,6 +19,22 @@ float32 float64
 complex64 complex128
 ```
 
+### about `fmt.Print*`
+```go
+s := "sss"
+d := 199
+v := []int{1, 2}
+fmt.Printf("string: %s, int: %d, value:%v\n", s, d, v)
+// output:
+// string: sss, int: 199, value:[1 2]
+fmt.Println("string: %s, int: %d, value:%v\n", s, d, v)
+// output:
+// string: %s, int: %d, value:%v
+//  sss 199 [1 2]
+```
+
+===
+
 ### about `array`
 
 ###### declare an array
@@ -36,14 +52,37 @@ func main() {
 ###### add items into array dynamically
 ```go
 // declare an empty array
-arr := []int{}
+var arr []int
 // add new items into array dynamically
 arr = append(arr, 55)
-arr = append(arr, 99)
-fmt.Println(arr[1])
+arr = append(arr, 99, 777)
+fmt.Println(arr)
+// output:
+// [55 99 777]
 ```
 
-###### slicing arrays
+###### new a slice
+```go
+func main {
+	a := make([]int, 5, 10) 
+	// len(a) = 5, cap(a) = 10
+	// len must not be bigger than cap
+	fmt.Printf("%v", a)
+	// output:
+	// [0 0 0 0 0]
+	
+	var z []int
+	fmt.Println(z, len(z), cap(z))
+	if z == nil {
+		fmt.Println("z is nil!")
+	}
+	// output:
+	// [] 0 0
+	// nil!
+}
+```
+
+###### slicing slices
 The expression `s[low:high]` evaluates to a slice of the elements from low through high-1, inclusive.
 ```go
 func main() {
