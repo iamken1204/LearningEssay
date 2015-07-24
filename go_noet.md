@@ -330,3 +330,6 @@ func main() {
 ```
 * ignore index, declare as `for _, val := range pow {}`
 * ignore value, declare as `for idx := range pow {}`
+
+### about `defer`, golang's `try catch`
+[ref](http://polor10101.gitbooks.io/golang_note/content/defer_panic_recover.html)
