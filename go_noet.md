@@ -146,22 +146,21 @@ fmt.Println(posts[0].title)
 ###### attach fun() to a struct
 ```go
 type Fib struct {
-	prev, next int
+	prev, next, sum int
 }
-func (fib Fib) Operation() Fib {
-	sum := fib.prev + fib.next
-	fib.prev, fib.next = fib.next, sum
-	return fib
+func (f Fib) Operation() Fib {
+	f.sum = f.prev + f.next
+	f.prev, f.next = f.next, f.sum
+	return f
 }
 func main() {
-	f := Fib{0, 1}
+	f := Fib{0, 1, 0}
 	for i := 0; i < 10; i++ {
 		f = f.Operation()
-		fmt.Println(fibonacci())
+		fmt.Println(f.sum)
 	}
 }
 // output:
-// 1
 // 1
 // 2
 // 3
@@ -171,6 +170,7 @@ func main() {
 // 21
 // 34
 // 55
+// 89
 ```
 
 ###### struct pointer
