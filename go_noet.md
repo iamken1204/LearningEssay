@@ -143,6 +143,36 @@ fmt.Println(posts[0].title)
 // out put I am
 ```
 
+###### attach fun() to a struct
+```go
+type Fib struct {
+	prev, next int
+}
+func (fib Fib) Operation() Fib {
+	sum := fib.prev + fib.next
+	fib.prev, fib.next = fib.next, sum
+	return fib
+}
+func main() {
+	f := Fib{0, 1}
+	for i := 0; i < 10; i++ {
+		f = f.Operation()
+		fmt.Println(fibonacci())
+	}
+}
+// output:
+// 1
+// 1
+// 2
+// 3
+// 5
+// 8
+// 13
+// 21
+// 34
+// 55
+```
+
 ###### struct pointer
 ```go
 type Vertex struct {
