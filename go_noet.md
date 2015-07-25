@@ -31,6 +31,10 @@ fmt.Println("string: %s, int: %d, value:%v\n", s, d, v)
 // output:
 // string: %s, int: %d, value:%v
 //  sss 199 [1 2]
+arr := []string{"i", "am", "ken"}
+fmt.Printf("arr = %q", arr)
+// output:
+// arr = ["i" "am" "ken"]
 ```
 
 ===
@@ -333,3 +337,46 @@ func main() {
 
 ### about `defer`, golang's `try catch`
 [ref](http://polor10101.gitbooks.io/golang_note/content/defer_panic_recover.html)
+
+### about `map`
+
+###### declare a map
+```go
+m := make(map[string]int)
+// or
+m := map[string]int{}
+```
+
+###### delete a map, check map's value is exist
+```go
+m := map[string]int{}
+m["age"] = 16
+delete(m, "age")
+value, ok := m["age"]
+fmt.Println(value, ok)
+// output:
+// 0 false
+```
+
+###### declare multi maps in one time
+```go
+type Post struct {
+	id    int
+	title string
+}
+
+func main() {
+person := map[string]Post{
+       "age" : {16, "h"},
+       "ago" : {27, "i"},
+       "agi" : {38, "j"},
+    }
+fmt.Println(person)
+fmt.Println(person["age"])
+}
+// output:
+// map[age:{16 h} ago:{27 i} agi:{38 j}]
+// {16 h}
+```
+
+===
