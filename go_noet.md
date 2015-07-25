@@ -379,8 +379,8 @@ fmt.Println(person["age"])
 // {16 h}
 ```
 
-###### a tour of go's map excise
-[excise is here](http://tour.golang.org/moretypes/19)   
+###### a tour of go's map exercise
+[exercise is here](http://tour.golang.org/moretypes/19)   
 my answer:
 ```go
 package main
