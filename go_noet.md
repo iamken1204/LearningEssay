@@ -379,4 +379,28 @@ fmt.Println(person["age"])
 // {16 h}
 ```
 
+###### a tour of go's map excise
+[excise is here](http://tour.golang.org/moretypes/19)   
+my answer:
+```go
+package main
+
+import (
+	"golang.org/x/tour/wc"
+	"strings"
+)
+
+func WordCount(s string) map[string]int {
+	ss := strings.Fields(s)
+	m := map[string]int{}
+	for _, val := range ss {
+		m[val] = m[val] + 1
+	}
+	return m
+}
+
+func main() {
+	wc.Test(WordCount)
+}
+```
 ===
