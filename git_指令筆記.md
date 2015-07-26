@@ -1,5 +1,8 @@
 # Git 指令筆記
 
+## git upgrading by homebrew
+`$ brew upgrade git`
+
 ## origin
 * 只clone某個branch   
 `git clone -b <branch-name> <remote-url>`   
