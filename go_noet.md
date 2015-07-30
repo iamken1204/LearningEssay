@@ -434,3 +434,38 @@ func main() {
 }
 ```
 ===
+
+###### a tour of go's stringer exercise
+[exercise is here](http://tour.golang.org/methods/7)   
+my answer:
+```go
+package main
+
+import "fmt"
+
+type IPAddr [4]byte
+
+func (ia IPAddr) String() string {
+	var res string
+	for i, v := range ia {
+		switch {
+		case i < len(ia) - 1:
+			res += fmt.Sprintf("%v.", v)
+		default:
+			res += fmt.Sprintf("%v", v)
+		}
+	}
+	return fmt.Sprintf(res)
+}
+
+func main() {
+	addrs := map[string]IPAddr{
+		"loopback":  {127, 0, 0, 1},
+		"googleDNS": {8, 8, 8, 8},
+	}
+	for idx, val := range addrs {
+		fmt.Printf("%v: %v\n", idx, val)
+	}
+}
+```
+__NOTE__ The func `String()` rewrite `fmt`'s `Stringer` _interface_.[(reference here)](http://tour.golang.org/methods/6) Originally you use `fmt.Printf("%v", val)` only prints the pure value of parameter, however, in this exercise, I implement `Stringer`'s content `String()` so that I can output ip value as `"127.0.0.1"` instead of `[127, 0, 0, 1]`.
