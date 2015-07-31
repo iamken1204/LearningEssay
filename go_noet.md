@@ -470,4 +470,6 @@ func main() {
 	}
 }
 ```
-__NOTE__ The func `String()` rewrite `fmt`'s `Stringer` _interface_.[(reference here)](http://tour.golang.org/methods/6) Originally you use `fmt.Printf("%v", val)` only prints the pure value of parameter, however, in this exercise, I implement `Stringer`'s content `String()` so that I can output ip value as `"127.0.0.1"` instead of `[127, 0, 0, 1]`.
+__NOTE__   
+The func `String()` rewrite `fmt`'s `Stringer` _interface_[(reference here)](http://tour.golang.org/methods/6).   
+Originally you use `fmt.Printf("%v", val)` only prints the pure value of parameter, however, in this exercise, I implement `Stringer`'s content `String()` so that I can output ip value as `"127.0.0.1"` instead of `[127, 0, 0, 1]`.
