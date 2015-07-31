@@ -435,6 +435,8 @@ func main() {
 ```
 ===
 
+### about golang's `interface`
+
 ###### a tour of go's stringer exercise
 [exercise is here](http://tour.golang.org/methods/7)   
 my answer:
