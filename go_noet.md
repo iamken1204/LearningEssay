@@ -476,3 +476,70 @@ func main() {
 __NOTE__   
 The func `String()` rewrite `fmt`'s `Stringer` _interface_[(reference here)](http://tour.golang.org/methods/6).   
 Originally you use `fmt.Printf("%v", val)` only prints the pure value of parameter, however, in this exercise, I implement `Stringer`'s content `String()` so that I can output ip value as `"127.0.0.1"` instead of `[127, 0, 0, 1]`.
+
+### about golang's `error`
+
+###### __type: `error`__, __func: `Error()`__
+The `error` type is a built-in interface similar to `fmt.Stringer`,   
+and the `error` type returns error message as string by it's func `Error()`.
+```go
+type error interface {
+	Error() string
+}
+```
+
+### An example of custom error implementation
+[ref](http://tour.golang.org/methods/8)
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+type MyError struct {
+	When time.Time
+	What string
+}
+
+func (e *MyError) Error() string {
+	return fmt.Sprintf("at %v: %s", e.When, e.What)
+}
+
+func report() error {
+	return &MyError{
+		time.Now(),
+		"Something went wrong!",
+	}
+}
+
+func main() {
+	if err := report(); err != nil {
+		fmt.Println(err)
+	}
+	// output:
+	// at 2009-11-10 23:00:00 +0000 UTC: Something went wrong!
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
