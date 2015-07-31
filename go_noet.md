@@ -439,7 +439,7 @@ func main() {
 
 ###### a tour of go's stringer exercise
 [exercise is here](http://tour.golang.org/methods/7)   
-my answer:
+my answer[(run in playground)](http://play.golang.org/p/K6YkbCL-Ia):
 ```go
 package main
 
@@ -468,6 +468,9 @@ func main() {
 	for idx, val := range addrs {
 		fmt.Printf("%v: %v\n", idx, val)
 	}
+	// output:
+	// googleDNS: 8.8.8.8
+	// loopback: 127.0.0.1
 }
 ```
 __NOTE__   
