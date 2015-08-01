@@ -555,8 +555,47 @@ func main() {
 ===
 
 ### about _goroutines_
+
+###### goroutine
 A _goroutine_ is a __thread__ managed by the GO runtime.   
 `go f(x, y, z)`   
 starts a goroutine running   
 `f(x, y, z)`   
 The func `f(x, y, z)` is defined in _current_ goroutine, but execution of `f(x, y, z)` runs in a new goroutine.   
+
+###### channel
+Channels are a type of golang, type name is `chan`.   
+Use channel operator `<-` to send or receive values.  
+By default, sends and receives are locked till both sides are ready.
+```go
+ch := make(chan int) // Channels must be created before use.
+ch <- v              // Send v to channel ch.
+v := <- ch           // Receive value and assign to v.
+```
+example:   
+```go
+package main
+
+import "fmt"
+
+func sum(a []int, ch chan int) {
+	sum := 0
+	for _, v := range a {
+		sum += v
+	}
+	ch <- sum // send sum to ch
+}
+
+func main() {
+	a := []int{7, 2, 8, -9, 4, 0}
+
+	ch := make(chan int)
+	go sum(a[:len(a)/2], ch)
+	go sum(a[len(a)/2:], ch)
+	x, y := <-ch, <-ch // receive from ch
+
+	fmt.Println(x, y, x+y)
+}
+```
+
+===
