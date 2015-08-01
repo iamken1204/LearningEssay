@@ -569,6 +569,7 @@ Use channel operator `<-` to send or receive values.
 By default, sends and receives are locked till both sides are ready.
 ```go
 ch := make(chan int) // Channels must be created before use.
+		     // This channel reveives int value.
 ch <- v              // Send v to channel ch.
 v := <- ch           // Receive value and assign to v.
 ```
@@ -595,6 +596,27 @@ func main() {
 	x, y := <-ch, <-ch // receive from ch
 
 	fmt.Println(x, y, x+y)
+}
+```
+
+###### buffered channels
+Channels can be buffered. Provide buffer-max-length as the second parameter in `make()` to initial a buffered channel:   
+`ch := make(chan int, 100)`   
+example:   
+```go
+package main
+
+import "fmt"
+
+func main() {
+	ch := make(chan string, 2)
+	ch <- "2"
+	ch <- "1"
+	fmt.Println(<-ch)
+	fmt.Println(<-ch)
+	// output:
+	// 2
+	// 1
 }
 ```
 
