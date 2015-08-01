@@ -571,7 +571,8 @@ By default, sends and receives are locked till both sides are ready.
 ch := make(chan int) // Channels must be created before use.
 		     // This channel reveives int value.
 ch <- v              // Send v to channel ch.
-v := <- ch           // Receive value and assign to v.
+v, ok := <- ch       // Receive value and assign to v.
+		     // The ok is an optional parameter, tells if the channel still remains valuse or it is closed.
 ```
 example:   
 ```go
