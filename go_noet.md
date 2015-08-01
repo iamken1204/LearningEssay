@@ -553,3 +553,10 @@ func main() {
 ```
 
 ===
+
+### about _goroutines_
+A _goroutine_ is a __thread__ managed by the GO runtime.   
+`go f(x, y, z)`   
+starts a goroutine running   
+`f(x, y, z)`   
+The func `f(x, y, z)` is defined in _current_ goroutine, but execution of `f(x, y, z)` runs in a new goroutine.   
