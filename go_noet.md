@@ -83,13 +83,13 @@ fmt.Println(arr)
 ###### new a slice
 ```go
 func main {
-	a := make([]int, 5, 10) 
+	a := make([]int, 5, 10)
 	// len(a) = 5, cap(a) = 10
 	// len must not be bigger than cap
 	fmt.Printf("%v", a)
 	// output:
 	// [0 0 0 0 0]
-	
+
 	var z []int
 	fmt.Println(z, len(z), cap(z))
 	if z == nil {
@@ -211,15 +211,15 @@ func main() {
 ===
 
 ### `goapp`
-> If you want to develop a web app by golang, there is a localhost server called `goapp` which were made by Google.[(for more info, check here)](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)   
+> If you want to develop a web app by golang, there is a localhost server called `goapp` which were made by Google.[(for more info, check here)](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)
 
-__How to use__   
-1. [Install go app](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)   
+__How to use__
+1. [Install go app](https://developers.google.com/appengine/downloads?hl=es#Google_App_Engine_SDK_for_Go)
 2. `$ cd $GOPATH/path/to/your/app/`
-__example: `$ cd $GOPATH/src/github.com/gin-gonic/gin/examples/`__   
+__example: `$ cd $GOPATH/src/github.com/gin-gonic/gin/examples/`__
 3. `$ goapp serve your_app_folder_name`
-__example: `$ goapp serve app-engine/`__   
-4. open `localhost:8080`   
+__example: `$ goapp serve app-engine/`__
+4. open `localhost:8080`
 
 * Google App Engine is in `localhost:8000`
 * goapp is in `localhost:8080` by default
@@ -410,7 +410,7 @@ fmt.Println(person["age"])
 ```
 
 ###### a tour of go's map exercise
-[exercise is here](http://tour.golang.org/moretypes/19)   
+[exercise is here](http://tour.golang.org/moretypes/19)
 my answer:
 ```go
 package main
@@ -438,7 +438,7 @@ func main() {
 ### about golang's `interface`
 
 ###### a tour of go's stringer exercise
-[exercise is here](http://tour.golang.org/methods/7)   
+[exercise is here](http://tour.golang.org/methods/7)
 my answer[(run in playground)](http://play.golang.org/p/K6YkbCL-Ia):
 ```go
 package main
@@ -473,8 +473,8 @@ func main() {
 	// loopback: 127.0.0.1
 }
 ```
-__NOTE__   
-The func `String()` rewrite `fmt`'s `Stringer` _interface_[(reference here)](http://tour.golang.org/methods/6).   
+__NOTE__
+The func `String()` rewrite `fmt`'s `Stringer` _interface_[(reference here)](http://tour.golang.org/methods/6).
 Originally you use `fmt.Printf("%v", val)` only prints the pure value of parameter, however, in this exercise, I implement `Stringer`'s content `String()` so that I can output ip value as `"127.0.0.1"` instead of `[127, 0, 0, 1]`.
 
 ===
@@ -482,7 +482,7 @@ Originally you use `fmt.Printf("%v", val)` only prints the pure value of paramet
 ### about golang's `error`
 
 ###### __type: `error`__, __func: `Error()`__
-The `error` type is a built-in interface similar to `fmt.Stringer`,   
+The `error` type is a built-in interface similar to `fmt.Stringer`,
 and the `error` type returns error message as string by it's func `Error()`.
 ```go
 type error interface {
@@ -556,15 +556,17 @@ func main() {
 
 ### about _goroutines_
 
+##### [golang channels tutorial](http://guzalexander.com/2013/12/06/golang-channels-tutorial.html)
+
 ###### goroutine
-A _goroutine_ is a __thread__ managed by the GO runtime.   
-`go f(x, y, z)`   
-starts a goroutine running   
-`f(x, y, z)`   
-The func `f(x, y, z)` is defined in _current_ goroutine, but execution of `f(x, y, z)` runs in a new goroutine.   
+A _goroutine_ is a __thread__ managed by the GO runtime.
+`go f(x, y, z)`
+starts a goroutine running
+`f(x, y, z)`
+The func `f(x, y, z)` is defined in _current_ goroutine, but execution of `f(x, y, z)` runs in a new goroutine.
 
 ###### channel
-Channels are a type of golang, type name is `chan`.   
+Channels are a type of golang, type name is `chan`.
 Use channel operator `<-` to send or receive values.  
 By default, sends and receives are locked till both sides are ready.
 ```go
@@ -574,7 +576,7 @@ ch <- v              // Send v to channel ch.
 v, ok := <- ch       // Receive value and assign to v.
 		     // The ok is an optional parameter, tells if the channel still remains valuse or it is closed.
 ```
-example:   
+example:
 ```go
 package main
 
@@ -601,9 +603,9 @@ func main() {
 ```
 
 ###### buffered channels
-Channels can be buffered. Provide buffer-max-length as the second parameter in `make()` to initial a buffered channel:   
-`ch := make(chan int, 100)`   
-example:   
+Channels can be buffered. Provide buffer-max-length as the second parameter in `make()` to initial a buffered channel:
+`ch := make(chan int, 100)`
+example:
 ```go
 package main
 
@@ -618,6 +620,37 @@ func main() {
 	// output:
 	// 2
 	// 1
+}
+```
+
+###### channel select
+example:
+```go
+import "fmt"
+
+func fibonacci(c, quit chan int) {
+	x, y := 0, 1
+	for {
+		select {
+		case c <- x:
+			x, y = y, x+y
+		case <-quit:
+			fmt.Println("quit")
+			return
+		}
+	}
+}
+
+func main() {
+	c := make(chan int)
+	quit := make(chan int)
+	go func() {
+		for i := 0; i < 10; i++ {
+			fmt.Println(<-c)
+		}
+		quit <- 0
+	}()
+	fibonacci(c, quit)
 }
 ```
 
