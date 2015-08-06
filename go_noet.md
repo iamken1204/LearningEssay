@@ -19,6 +19,21 @@ float32 float64
 complex64 complex128
 ```
 
+### Compositional Object
+```go
+type Circle struct {
+	x, y, r float64
+}
+
+func (c *Circle) area() float64 {
+	return math.Pi * c.r*c.r
+}
+// (c *Circle) means Circles can call this function.
+// Meaning object data and methods are SEPERATE.
+// Data in the struct, methods on the type.
+// So you can keep adding methods as your application requires.
+```
+
 ### about `fmt.Print*`
 ```go
 s := "sss"
