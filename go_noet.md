@@ -452,6 +452,59 @@ func main() {
 
 ### about golang's `interface`
 
+###### example [reference here, start at page32](http://www.brightball.com/golang/go-from-a-php-perspective)
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Circle struct {
+	x, y, r float64
+}
+
+func (c *Circle) area() float64 {
+	return math.Pi * c.r * c.r
+}
+
+type Rectangle struct {
+	x1, y1, x2, y2 float64
+}
+
+func distance(x, y, xx, yy float64) float64 {
+	return x + y + xx + yy
+}
+
+func (r *Rectangle) area() float64 {
+	l := distance(r.x1, r.y1, r.x1, r.y2)
+	w := distance(r.x1, r.y1, r.x2, r.y1)
+	return l * w
+}
+
+// Any type with an area() float64 method is a Shape
+type Shape interface {
+	area() float64
+}
+
+func totalArea(shapes ...Shape) float64 {
+	var area float64
+	for _, s := range shapes {
+		area += s.area()
+	}
+	return area
+}
+
+func main() {
+	c := Circle{6, 6, 19}
+	r := Rectangle{4, 4, 5, 5}
+	fmt.Println(totalArea(&c, &r))
+}
+```
+> 這裏有點複雜，先用中文紀錄......   
+宣告 __Shape__ 為 interface，所有擁有 area() 而且回傳 float64 的 __struct__ 都屬於 __Shape__，宣告 totalArea() 為 __Shape__ 的 function，因為 golang 沒有 extend 的關係，想讓不同 __struct__ 擁有同一個 funciton 的話就要透過 interface 來實現。
+
 ###### a tour of go's stringer exercise
 [exercise is here](http://tour.golang.org/methods/7)
 my answer[(run in playground)](http://play.golang.org/p/K6YkbCL-Ia):
