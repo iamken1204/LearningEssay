@@ -54,6 +54,41 @@ fmt.Printf("arr = %q", arr)
 
 ===
 
+### something like `php`'s "extend" in golang
+[ref](https://github.com/ZGeomantic/learn/wiki/go%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E3%80%81%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E7%9A%84override%EF%BC%88%E8%A6%86%E5%86%99%EF%BC%8C%E9%87%8D%E5%86%99%EF%BC%89)
+```go
+package main
+
+import "fmt"
+
+type Father struct {
+	name string
+}
+
+func (f Father) MyName() string {
+	return f.name
+}
+
+type Son struct {
+	father Father
+}
+
+func (s Son) MyName() string {
+	return "Who are you? I won't talk to strangers."
+}
+
+func main() {
+	ff := Father{"Ken"}
+	ss := Son{ff}
+	fmt.Println(ss.MyName())
+	// output:
+	// Who are you? I won't talk to strangers.
+	// in the situation of Son did not declare a MyName() func
+	// output:
+	// Ken
+}
+```
+
 ### about `array`
 
 ###### declare an array
