@@ -258,6 +258,39 @@ func main() {
 // &{11, 9}
 ```
 
+### dump methods of structs
+```go
+package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
+type Father struct {
+	name string
+}
+
+func (f Father) MyName() string {
+	return f.name
+}
+
+func funcs() string {
+	fooType := reflect.TypeOf(Father{})
+	for i := 0; i < fooType.NumMethod(); i++ {
+    		method := fooType.Method(i)
+    		fmt.Println(method.Name)
+	}
+	return "H"
+}
+
+func main() {
+	funcs()
+	// output:
+	// MyName
+}
+```
+
 ===
 
 ### `goapp`
