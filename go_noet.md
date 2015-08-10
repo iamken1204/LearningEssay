@@ -258,6 +258,72 @@ func main() {
 // &{11, 9}
 ```
 
+===
+
+### about `pointer`
+```go
+package main
+
+import "fmt"
+
+type Post struct {
+	name string
+}
+
+func (p *Post) setName(name string) {
+	p.name = name
+}
+
+func (p Post) Name(name string) Post {
+	p.name = name
+	return p
+}
+
+func main() {
+	p1 := Post{"First Post"}
+	p2 := new(Post)
+	fmt.Println(p1)
+	fmt.Println(p2)
+	// output:
+	// {First Post}
+	// &{}
+
+	fmt.Println(p1.name)
+	fmt.Println(p2.name)
+	// output:
+	// First Post
+	// 
+	
+	p1.setName("Test")
+	p2.setName("Second Post")
+	fmt.Println(p1.name)
+	fmt.Println(p2.name)
+	// output:
+	// Test
+	// Second Post
+	
+	p1 = p1.Name("No Pointer")
+	*p2 = p2.Name("No Pointer2")
+	fmt.Println(p1.name)
+	fmt.Println(p2.name)
+	// output:
+	// No Pointer
+	// No Pointer2
+}
+```
+* `func (p *Post) setName(name string)` set struct `Post` through pointer `p`
+* The `&{}` means `p2` points to struct `Post`
+* In the last section of code, if you use `p2 = p2.Name("No Pointer2")`(without `*` points to `p2`), golang will send you an error message: `cannot use p2.Name("No Pointer2") (type Post) as type *Post in assignment`.
+* If you have a parameter use `&` points to another, you have to assign `*` before parameter to get or set values to origin parameter.
+```go
+i := 29
+p := &i
+fmt.Println(*p) // get i through pointer p
+*p = 100        // set i through pointer p
+```
+
+===
+
 ### dump methods of structs
 ```go
 package main
