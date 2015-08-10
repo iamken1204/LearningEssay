@@ -1,5 +1,8 @@
 # Linux and Unix MySQL commands
 
+### open mysql server in osx
+`$ mysql.server start`
+
 [reference](http://www.computerhope.com/unix/mysql.htm)
 
 * link to MySQL   
