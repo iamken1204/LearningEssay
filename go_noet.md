@@ -1,5 +1,21 @@
 # GO language
 
+### golang's Command
+* `go install` For programs you want to execute directly.
+     * In `$GOPATH/src/github.com/iamken1204/hello/`, after you complete `hello.go`.
+     * `$ go install`
+     * Then you can use `$ hello` to execute `hello.go`'s program.   
+       It produced a binary code named `hello` in `$GOPATH/bin/`.
+* `go build` For web apps buildeing.
+    * In `$GOPATH/src/github.com/iamken1204/webapp/`, after you complete `web.go`.
+    * `$ go build`
+    * `$ ./webapp`
+    * Then you can visit `http://localhost` to check your web app.
+* `go run` For programs testing without producing a go binary.
+    * In `$GOPATH/src/github.com/iamken1204/open/`, after you complete `open.go`.
+    * `$ go run open.go`
+    * Go will execute `open.go` directly.
+
 ### golang's basic types
 ```
 bool
