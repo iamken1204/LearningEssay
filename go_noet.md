@@ -11,10 +11,12 @@
     * `$ go build`
     * `$ ./webapp`
     * Then you can visit `http://localhost` to check your web app.
-* `go run` For programs testing without producing a go binary.
+* `go run [yourProgram.go]` For programs testing without producing a go binary.
     * In `$GOPATH/src/github.com/iamken1204/open/`, after you complete `open.go`.
     * `$ go run open.go`
     * Go will execute `open.go` directly.
+* `go get [remote/author/package]` For go packages' installing.
+* `go get -u [remote/author/package]` For go packages' updating.
 
 ### golang's basic types
 ```
