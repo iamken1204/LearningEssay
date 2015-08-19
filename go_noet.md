@@ -27,7 +27,7 @@
     	// bla bla...
     }
     ```
-    `$ go generate` will output: `hello from go generste`.
+    `$ go generate` will output: `hello from go generate`.
 
 ### golang's basic types
 ```
