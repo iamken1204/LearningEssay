@@ -17,6 +17,17 @@
     * Go will execute `open.go` directly.
 * `go get [remote/author/package]` For go packages' __installing__.
 * `go get -u [remote/author/package]` For go packages' __updating__.
+* `go generate` [ref](http://www.slideshare.net/poga/gtg12) Shell scrpting in go.
+    * example
+    ```go
+    //go:generate echo 'hello from go generate'
+    package main
+    
+    func main() {
+    	// bla bla...
+    }
+    ```
+    `$ go generate` will output: `hello from go generste`.
 
 ### golang's basic types
 ```
