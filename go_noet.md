@@ -15,8 +15,8 @@
     * In `$GOPATH/src/github.com/iamken1204/open/`, after you complete `open.go`.
     * `$ go run open.go`
     * Go will execute `open.go` directly.
-* `go get [remote/author/package]` For go packages' installing.
-* `go get -u [remote/author/package]` For go packages' updating.
+* `go get [remote/author/package]` For go packages' __installing__.
+* `go get -u [remote/author/package]` For go packages' __updating__.
 
 ### golang's basic types
 ```
