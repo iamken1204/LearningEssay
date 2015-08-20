@@ -885,3 +885,30 @@ func main() {
 ```
 
 ===
+
+### Common Question
+
+#### Go is a strongly type language!? What if I want to fetch a value without knowing its type?
+__Use `interface{}` to fetch value.__
+```go
+package main
+
+import "fmt"
+
+type Article struct {
+	id      int
+	title   string
+	context interface{}
+}
+
+func main() {
+	arr := []int{1, 2, 3}
+	a1 := Article{1, "First", arr}
+	a2 := Article{2, "Second", "hello"}
+	fmt.Println(a1)
+	fmt.Println(a2)
+	// output:
+	// {1 First [1 2 3]}
+	// {2 Second hello}
+}
+```
