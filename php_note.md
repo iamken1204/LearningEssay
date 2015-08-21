@@ -34,6 +34,22 @@ $b->printing();
 // a.printing() b.printing()
 ```
 
+### 使用 `preg_replace()` 取代字串
+* Use `()` to catch parameter you want to retain, it will convert to `$1`, `$2`, ...
+```php
+$timestamp = '2015-06-06 14:00:00';
+
+$timeConvert = preg_replace(
+    '/(\d{4})-(\d{2})-(\d{2})(\s\d{2}):(\d{2}):(\d{2})/',
+    "$1年$2月$3日$4時$5分$6秒",
+    $timestamp
+);
+
+echo $timeConvert;
+// output:
+// 2015年06月06日 14時00分00秒
+```
+
 ### getcwd()
 取得目前執行之檔案的絕對路徑
 ```php
