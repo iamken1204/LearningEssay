@@ -25,3 +25,7 @@ Quick-Start: Run Boot2Docker (located in Applications), which will open a termin
 ```shell
 $ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 ```
+
+## docker working flow
+1. `$ docker-machine start yourVMName`
+2. 
