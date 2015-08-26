@@ -8,8 +8,14 @@ Quick-Start: Run Boot2Docker (located in Applications), which will open a termin
 •	The docker and boot2docker binaries are in /usr/local/bin which you can access from your terminal.  For further information, please see the Docker OS X installation documentation.
 ```
 
+## docker-machine path
+`~/.docker/machine/machines`
+
 ## Commands
-
-### boot2docker
-
-### docker
+    $ docker-machine
+    $ docker-machine create -drive virtualbox yourMachineName
+    $ docker-machine ls
+    $ docker-machine env yourMachineName
+    $ eval "$(docker-machine env yourMachineName)"
+    $ docker images
+    $ docker run yourImageName
