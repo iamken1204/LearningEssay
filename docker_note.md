@@ -29,3 +29,9 @@ $ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 ## docker working flow
 1. `$ docker-machine start yourVMName`
 2. 
+
+## show containers
+to show only running containers
+    $ docker ps
+to show all containers
+    $ docker ps -a
