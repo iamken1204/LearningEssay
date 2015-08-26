@@ -32,6 +32,10 @@ $ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 
 ## show containers
 to show only running containers
-    $ docker ps
+```shell
+$ docker ps
+```
 to show all containers
-    $ docker ps -a
+```shell
+$ docker ps -a
+```
