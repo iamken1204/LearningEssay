@@ -28,7 +28,9 @@ $ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 
 ## docker working flow
 1. `$ docker-machine start yourVMName`
-2. 
+2. `$ docker pull someImage`
+3. `$ touch Dockerfile` # By default, when you are running `docker build`, docker will find `Dockerfile` for building command.
+4. # edit your Dockerfile
 
 ## show containers
 to show only running containers
