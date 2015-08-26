@@ -19,3 +19,9 @@ Quick-Start: Run Boot2Docker (located in Applications), which will open a termin
     $ eval "$(docker-machine env yourMachineName)"
     $ docker images
     $ docker run yourImageName
+    
+## remove <none> images
+[ref](http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html)
+```shell
+$ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+```
