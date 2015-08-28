@@ -25,6 +25,10 @@ Quick-Start: Run Boot2Docker (located in Applications), which will open a termin
 ```shell
 $ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 ```
+Another better way: [ref](http://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers)
+```
+$ docker images | grep "<none>" | awk '{print $3}' | xargs docker rmi
+```
 
 ## docker working flow
 1. `$ docker-machine start yourVMName`
