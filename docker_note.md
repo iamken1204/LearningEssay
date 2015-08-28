@@ -30,6 +30,8 @@ $ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 1. `$ docker-machine start yourVMName`
 2. `$ docker pull ubuntu:14.04`
 3. `$ docker run -t -i ubuntu:14.04 /bin/bash`
+4. # do somethine in your image
+5. `$ docker commit <yourDockerImageID> <username>/<imagename>:<imagetag>` # If you forget image id, you can use `$ docker pa -a` to find it out.
 
 ## show containers
 to show only running containers
