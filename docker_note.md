@@ -52,3 +52,10 @@ $ docker ps -a
 ```
 $ docker rm `docker ps --no-trunc -aq`
 ```
+
+## Mount a host directory as a data volume
+[ref](https://docs.docker.com/userguide/dockervolumes/)   
+Use `-v` to mount as a data volume.
+```
+$ docker run -ti -v $PWD/gowiki:/root/go/src/github.com/iamken1204/gowiki kettan/gobuntu:0.0.6 /bin/bash
+```
