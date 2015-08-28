@@ -46,3 +46,9 @@ to show all containers
 ```shell
 $ docker ps -a
 ```
+
+## remove all containers
+[ref (qkrijger's answer is working for me)](http://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers)
+```
+$ docker rm `docker ps --no-trunc -aq`
+```
