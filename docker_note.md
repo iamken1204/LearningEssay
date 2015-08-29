@@ -59,3 +59,18 @@ Use `-v` to mount as a data volume.
 ```
 $ docker run -ti -v $PWD/gowiki:/root/go/src/github.com/iamken1204/gowiki kettan/gobuntu:0.0.6 /bin/bash
 ```
+
+## Link to go web app in docker container
+* First we need to find out where is out docker-machine's ip:   
+```
+$ docker-machine ls
+NAME      ACTIVE   DRIVER       STATE     URL                         SWARM
+default   *        virtualbox   Running   tcp://192.168.99.100:2376
+```
+* Then run our container, assign its port `8000` reflect to host's `8000`.
+```
+$ docker run --rm -ti -p 8000:8000 -v $PWD/gowiki:/root/go/src/github.com/iamken1204/gowiki kettan/gobuntu:0.0.6 /bin/bash
+$ cd /root/go/src/github.com/iamken1204/gowiki
+$ ./wiki
+```
+* Finally, we can visit `192.168.99.100:8080` to see our web app!
