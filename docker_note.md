@@ -55,6 +55,7 @@ $ docker rm `docker ps --no-trunc -aq`
 
 ## Mount a host directory as a data volume
 [ref](https://docs.docker.com/userguide/dockervolumes/)   
+__NOTE__ Currently(docker version _1.8.1_) can only touch files under `/Users` on Mac OSX.
 Use `-v` to mount as a data volume.
 ```
 $ docker run -ti -v $PWD/gowiki:/root/go/src/github.com/iamken1204/gowiki kettan/gobuntu:0.0.6 /bin/bash
