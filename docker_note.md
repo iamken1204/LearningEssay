@@ -72,3 +72,15 @@ $ cd /root/go/src/github.com/iamken1204/gowiki
 $ ./wiki
 ```
 * Finally, we can visit `192.168.99.100:8080` to see our web app!
+
+## Action options
+* `run`
+	* `-i` Keep STDIN open even if not attached.
+	* `-t` Allocate a pseudo-TTY. 
+	* `--rm | --rm=true` Delete container when it exits.
+	* `--name=` Assign container's name.
+	* `-v` Bind mount a volume.
+	* `-w` | --workdir= Assign working directory in a container.
+
+Assume __`-it`__ when you want to use `bash` in container.
+    
