@@ -51,3 +51,10 @@
 * 修改最近一次尚未push的commit訊息   
 `git commit --amend -m <new_commit_message>`   
 [參考](http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git)   
+
+===
+* Undo a merge
+```shell
+$ git reset --merge ORIG_HEAD
+```
+[ref](http://stackoverflow.com/questions/2389361/undo-a-git-merge)
