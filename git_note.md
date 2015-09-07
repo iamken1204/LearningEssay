@@ -1,4 +1,4 @@
-# Git 指令筆記
+# Git Note
 
 ## git upgrading by homebrew
 `$ brew upgrade git`
@@ -53,8 +53,6 @@
 [參考](http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git)   
 
 ===
-* Undo a merge
-```shell
-$ git reset --merge ORIG_HEAD
-```
+* Undo a merge   
+`$ git reset --merge ORIG_HEAD`   
 [ref](http://stackoverflow.com/questions/2389361/undo-a-git-merge)
