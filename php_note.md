@@ -190,7 +190,7 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
-### ERROR: __Can't use method return value in write context__
+### ERROR: Can't use method return value in write context
 [ref](http://stackoverflow.com/questions/1075534/cant-use-method-return-value-in-write-context/4328049#4328049)
 ```php
 function hi() {
