@@ -190,6 +190,25 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
+### ERROR: __Can't use method return value in write context__
+[ref](http://stackoverflow.com/questions/1075534/cant-use-method-return-value-in-write-context/4328049#4328049)
+```php
+function hi() {
+	return 'hi';
+}
+$s = hi();
+
+// In this case, php will output: FATAL ERROR Can't use function return value in write context on line number 9.
+// Use empty($s) instead.
+if (empty(hi()) {
+	echo 'empty';
+} else {
+	echo 'has value';
+}
+```
+You cannot let `empty()` judge method's return value, put a parameter into `empty()` so that php won't blame.
+
+
 ### print out code's executing time
 ```php
 function example() {
