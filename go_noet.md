@@ -28,6 +28,10 @@
     }
     ```
     `$ go generate` will output: `hello from go generate`.
+    
+### Vendoring
+Golang had vendoring since version 1.5.   
+[See example here](https://github.com/iamken1204/Golang_package_and_vendor)
 
 ### golang's basic types
 ```
