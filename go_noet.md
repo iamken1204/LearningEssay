@@ -918,7 +918,7 @@ func main() {
 }
 ```
 
-#### Transform date timt into custom format
+#### Transform date time into custom format
 ```go
 now := time.Now()
 fmt.Println("now time with default format:", now)
@@ -927,8 +927,8 @@ fmt.Println("now time with default format:", now)
 // Jan 2 15:04:05 2006 MST
 //   1 2  3  4  5    6  -7
 layout := "2006-01-02 15:04:05"
-fmt.Println("now time with custom layout1:", now.Format(layout))
+fmt.Println("now time with custom layout:", now.Format(layout))
 // output:
 // now time with default format: 2009-11-10 23:00:00 +0000 UTC
-// now time with custom layout1: 2009-11-10 23:00:00
+// now time with custom layout: 2009-11-10 23:00:00
 ```
