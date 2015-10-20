@@ -13,6 +13,17 @@ where `ARTICLE_ID` in (
 order by  `ARTICLE_CLICKS`.`ARTICLE_ID` desc
 ```
 
+### Another subquery
+```mysql
+select *
+from (
+    select * from participants_kettan
+    group by awarded_title_id
+) as tmp
+group by zip_code
+```
+__Note__ that subquery in `()` must be assigned a alias.   
+
 ### 減少更新資料時的query次數
 
 ```mysql
