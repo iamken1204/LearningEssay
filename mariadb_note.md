@@ -1,5 +1,7 @@
 # Mariadb Note
 
+## [Install mariadb by homebrew](https://mariadb.com/blog/installing-mariadb-10010-mac-os-x-homebrew)
+
 ## Message of mariadb installed by homebrew
 ```shell
 A "/etc/my.cnf" from another install may interfere with a Homebrew-built
