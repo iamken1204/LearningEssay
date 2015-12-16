@@ -1,5 +1,20 @@
 # MySQL note
 
+### 特定情境處理方法
+* 想要根據不重複 `account` __並且__找出最新 (`id` 最大) 的資料
+```mysql
+select id, account, data
+from consumer_data
+where id in (
+    select MAX(id)
+    from consumer_data
+    group by account
+)
+and id < %d
+ORDER BY `id` DESC
+limit %d
+```
+
 ### 子查詢
 在where條件裡面可以再下其他查詢   
 ```mysql
