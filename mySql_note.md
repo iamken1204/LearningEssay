@@ -1,7 +1,8 @@
 # MySQL note
 
 ### 特定情境處理方法
-* 想要根據不重複 `account` __並且__找出最新 (`id` 最大) 的資料
+* 想要根據不重複 `account` __並且__找出最新 (`id` 最大) 的資料   
+`group by` 預設並不會找最新一筆，所以要用 `max()` 強迫 DB query 出符合需要的資料
 ```mysql
 select id, account, data
 from consumer_data
