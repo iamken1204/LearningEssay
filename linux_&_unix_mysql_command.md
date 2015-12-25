@@ -21,14 +21,19 @@ __NOTE__ There is no space between `-p`and it's password
 `[MySQL command]`   
 `\G`   
 
-* Show mysql's charset
+* Show and config mysql's charset
 ```
 mysql> show variables like "%character%";show variables like "%collation%";
+```
+You can set mysql's config by specific is variable name, like:
+```
+mysql> set [Variable_name] = [Value];
 ```
 In order to use traditional chinese in mysql, there is recommended to set collation as utf8_general_ci.
 ```
 mysql> set collation_connection = utf8_general_ci;
-mysql> set collation_connection = utf8_general_ci;
+mysql> set collation_database = utf8_general_ci;
+mysql> set collation_server = utf8_general_ci;
 ```
 
 ## start, stop and restart MySql
