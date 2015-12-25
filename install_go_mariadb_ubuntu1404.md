@@ -54,7 +54,7 @@ To simulate cron with it's empty `env` run:
 $ env -i ./yourScript.sh
 ```
 
-### Run 80 port on Google Compute Engine (GAE)
+### Run 80 port on Google Compute Engine(GCE)
 Your user account has no permission to run 80 port directly.   
 If you want to run web app on 80 port, switch to root user
 ```
