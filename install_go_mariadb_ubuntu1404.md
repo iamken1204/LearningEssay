@@ -33,9 +33,9 @@
 
 ## !!Attention!!
 
-### About Crontab
+### About Crontab [ref](http://stackoverflow.com/questions/33934764/crontab-wont-run-program)
 The `env` used by crontab __IS NOT__ the same as your(or other user's) `env`.   
-That means your have to run go binaries by a shell script, and the shell script must reset env for go like `$GOPATH` etc.
+That means your have to run go binaries by a shell script, and the shell script must reset `env` for go like `$GOPATH` etc.
 ```shell
 #!/bin/bash
 
@@ -48,4 +48,8 @@ export GO15VENDOREXPERIMENT=1
 export GOBIN=$GOPATH/bin
 
 cd $GOBIN && ./yourGoBin
+```
+To simulate cron with it's empty `env` run:
+```
+$ env -i ./yourScript.sh
 ```
