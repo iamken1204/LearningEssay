@@ -21,5 +21,15 @@ __NOTE__ There is no space between `-p`and it's password
 `[MySQL command]`   
 `\G`   
 
+* Show mysql's charset
+```
+mysql> show variables like "%character%";show variables like "%collation%";
+```
+In order to use traditional chinese in mysql, there is recommended to set collation as utf8_general_ci.
+```
+mysql> set collation_connection = utf8_general_ci;
+mysql> set collation_connection = utf8_general_ci;
+```
+
 ## start, stop and restart MySql
 [ref](http://coolestguidesontheplanet.com/start-stop-mysql-from-the-command-line-terminal-osx-linux/)
