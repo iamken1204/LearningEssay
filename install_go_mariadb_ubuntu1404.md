@@ -53,3 +53,16 @@ To simulate cron with it's empty `env` run:
 ```
 $ env -i ./yourScript.sh
 ```
+
+### Run 80 port on Google Compute Engine (GAE)
+Your user account has no permission to run 80 port directly.   
+If you want to run web app on 80 port, switch to root user
+```
+$ sudo -s
+```
+and reset `env` for root to use GO,
+```
+# If you already edit /etc/profile for golang using.
+$ source /etc/profile
+```
+then you are ready to use it!
