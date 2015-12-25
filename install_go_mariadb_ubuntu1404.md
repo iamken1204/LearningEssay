@@ -30,3 +30,22 @@
    * `$ mkdir $HOME/go ; mkdir $HOME/go/src $HOME/go/pkg $HOME/go/bin`
      
    * Check if the installation was succeeded: `$ go version`
+
+## !!Attention!!
+
+### About Crontab
+The `env` used by crontab __IS NOT__ the same as your(or other user's) `env`.   
+That means your have to run go binaries by a shell script, and the shell script must reset env for go like `$GOPATH` etc.
+```shell
+#!/bin/bash
+
+export PATH=$PATH:/usr/bin/go/bin
+export HOME=/home/iamken1204
+export GOPATH=$HOME/go
+export PATH=$PATH:/$GOPATH/bin
+export GOROOT=/usr/bin/go
+export GO15VENDOREXPERIMENT=1
+export GOBIN=$GOPATH/bin
+
+cd $GOBIN && ./yourGoBin
+```
