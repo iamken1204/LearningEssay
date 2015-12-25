@@ -10,3 +10,8 @@ After system says ok, insert:
 flush_all
 ```
 then type `quit` to leave talnet mode.
+
+### Empty the contents of a file [ref](http://unix.stackexchange.com/questions/88808/empty-the-contents-of-a-file)
+```
+$ truncate -s 0 yourFileName
+```
