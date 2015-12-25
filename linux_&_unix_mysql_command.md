@@ -21,7 +21,7 @@ __NOTE__ There is no space between `-p`and it's password
 `[MySQL command]`   
 `\G`   
 
-* Show and config mysql's charset
+* Show and config mysql's charset [ref](http://stackoverflow.com/questions/3513773/change-mysql-default-character-set-to-utf-8-in-my-cnf)
 ```
 mysql> show variables like "%character%";show variables like "%collation%";
 ```
