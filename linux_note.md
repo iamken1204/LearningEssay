@@ -15,3 +15,13 @@ then type `quit` to leave talnet mode.
 ```
 $ truncate -s 0 yourFileName
 ```
+
+### Find which ports are being used now [ref](http://www.cyberciti.biz/faq/what-process-has-open-linux-port/)
+* find all   
+```shell
+$ netstat -tulpn
+```
+* find a specific port
+```shell
+$ netstat -tulpn | grep :80
+```
