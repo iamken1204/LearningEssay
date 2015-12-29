@@ -47,6 +47,8 @@
 
 `⌘ + ⌥ + ↓`   移動到游標上html dom class在css檔的位置(Goto Definition)  windows:F12
 
+`⌘ +  ctrl + m` Jump between two brackets
+
 ## Split Window
 
 `⌘ + ⌥ + 2`			程式區塊變成兩個 直列   
