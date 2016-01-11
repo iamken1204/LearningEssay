@@ -159,6 +159,17 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+### Detect global key pressing without jQuery
+```javascript
+var getKeypressEvent = function(event) {
+	console.log(event.keyCode)
+}
+document.addEventListener('keydown', getKeypressEvent)
+// event name can be 'keyup' or 'keydown'.
+// In IE, you have to use document.attachEvent to add global events, or use codes below:
+window.addEventListener? document.addEventListener('keydown', setShiftDown) : document.attachEvent('keydown', setShiftDown)
+```
+
 ### trigger an event by jQuery
 [reference](http://stackoverflow.com/questions/20928915/jquery-triggerclick-not-working)
 ```javascript
