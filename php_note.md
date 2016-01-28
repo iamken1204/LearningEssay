@@ -190,6 +190,13 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
+### Reduce memories from unusing parameters
+```php
+unset($someParam);
+// way faster
+$someParam = null;
+```
+
 ### ERROR: Can't use method return value in write context
 [ref](http://stackoverflow.com/questions/1075534/cant-use-method-return-value-in-write-context/4328049#4328049)
 ```php
