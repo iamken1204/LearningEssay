@@ -115,6 +115,44 @@ var d = new Date(),
 =======
 ## Design Pattern
 
+### `prototype`: js' interface
+```javascript
+/**
+ * Use prototype for base object:
+ */
+var BaseObj = function (data) {
+	this.data = data
+}
+
+BaseObj.prototype.say = function () {
+	console.log(this.data)
+}
+
+var aaa = new BaseObj('aaaaaaaaaaaaa')
+var bbb = new BaseObj('bbbbbbbbbbbbb')
+
+aaa.say()
+// aaaaaaaaaaaaa
+bbb.say()
+// bbbbbbbbbbbbb
+
+/**
+ * If you did not use prototype...
+ */
+var BaseObj = function (data) {
+	this.data = data
+}
+
+BaseObj.say = function () {
+	console.log(this.data)
+}
+
+var aaa = new BaseObj('aaaaaaaaaaaaa')
+
+aaa.say()
+// Uncaught TypeError: aaa.say is not a function
+```
+
 ### object pattern
 ```javascript
 $(function() {
