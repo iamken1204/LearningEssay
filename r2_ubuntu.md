@@ -117,19 +117,18 @@ $ service mysql start
 $ apt-get install wget
 ```
 
-* install phpMyAdmin
-1. go to [official site](https://www.phpmyadmin.net/downloads/) and get the download link   
+* install phpMyAdmin, go to [official site](https://www.phpmyadmin.net/downloads/) and get the download link   
 ```shell
 $ cd /tmp
 $ wget https://files.phpmyadmin.net/phpMyAdmin/4.5.5/phpMyAdmin-4.5.5-all-languages.tar.gz
 $ tar -xzf phpMyAdmin-4.5.5-all-languages.tar.gz
 ```
-2. mv phpmyadmin folder to nginx's default site folder   
+* mv phpmyadmin folder to nginx's default site folder   
 ```shell
 $ mv phpMyAdmin-4.5.5-all-languages phpmyadmin
 $ mv ./phpmyadmin /usr/share/nginx/html
 ```
-3. modify nginx's default host
+* modify nginx's default host
 ```shell
 $ vi /etc/nginx/sites-available/default
 ```
@@ -168,4 +167,4 @@ server {
         }
 }
 ```
-4. test link of phpmyadmin
+* test link of phpmyadmin
