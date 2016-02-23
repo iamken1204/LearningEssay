@@ -88,7 +88,7 @@ $ apt-get install mariadb-server
 
 ```
 set datadir = /storage/mysql/data
-set default-time-zone = ‘+8:00’
+set default-time-zone = '+8:00'
 ```
 
 * [Optional] install graph handler imagemagic libaray
