@@ -32,11 +32,6 @@ $ apt-get install nginx
 
 * instal php fpm, php mysql, php-cli, php5-mcrypt, php5-curl, php5-imagick, php-gd
 
-​	
-
-​	
-
-​	
 ```shell
 $ apt-get install php5-fpm php5-mysql php5-cli php5-mcrypt php5-curl php5-imagick php5-gd
 $ apt-get install php5-memcached memcached
@@ -79,7 +74,9 @@ pm.max_spare_servers = 60
 
 * [Optional] add a EBS to this instance which position at /storage/mysql (only on Dev)
 
-    $ mount /dev/svdf /storage/mysql
+```shell
+$ mount /dev/svdf /storage/mysql
+```
 
 * install MySQL
 
