@@ -1,10 +1,8 @@
 # Creating an nginx_php_mariadb server within Ubuntu 14.04
 
+Ubuntu Server 14.04 LTS (HVM), SSD Volume Type   
 
-Ubuntu Server 14.04 LTS (HVM), SSD Volume Type
-
-
-
+## Install and Config
 
 * set server time zone data
 
@@ -106,3 +104,68 @@ $ apt-get install imagemagick
 ```shell
 $ apt-get install fail2ban
 ```
+
+## Install phpMyAdmin
+
+* test mysql
+```shell
+$ service mysql start
+```
+
+* install wget
+```shell
+$ apt-get install wget
+```
+
+* install phpMyAdmin
+1. go to [official site](https://www.phpmyadmin.net/downloads/) and get the download link   
+```shell
+$ cd /tmp
+$ wget https://files.phpmyadmin.net/phpMyAdmin/4.5.5/phpMyAdmin-4.5.5-all-languages.tar.gz
+$ tar -xzf phpMyAdmin-4.5.5-all-languages.tar.gz
+```
+2. mv phpmyadmin folder to nginx's default site folder   
+```shell
+$ mv phpMyAdmin-4.5.5-all-languages phpmyadmin
+$ mv ./phpmyadmin /usr/share/nginx/html
+```
+3. modify nginx's default host
+```shell
+$ vi /etc/nginx/sites-available/default
+```
+as...
+```
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+
+        root /usr/share/nginx/html;
+        index index.html index.htm index.php;
+
+        # Make site accessible from http://localhost/
+        server_name localhost;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+                # Uncomment to enable naxsi on this location
+                # include /etc/nginx/naxsi.rules
+        }
+        
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        location ~ \.php$ {
+                fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        #       # NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+        #
+        #       # With php5-cgi alone:
+        #       fastcgi_pass 127.0.0.1:9000;
+        #       # With php5-fpm:
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
+                fastcgi_index index.php;
+                include fastcgi_params;
+        }
+}
+```
+4. test link of phpmyadmin
