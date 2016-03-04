@@ -59,6 +59,7 @@ max_input_vars = 5000
 pm.max_children = 50
 pm.start_servers = 10
 pm.min_spare_servers = 5
+pm.max_spare_servers = 15
 ```
 
 > for fps
