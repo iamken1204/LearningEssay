@@ -25,3 +25,13 @@ $ netstat -tulpn
 ```shell
 $ netstat -tulpn | grep :80
 ```
+
+### Archive hidden files or directories (dot files)
+* Use command below to enable dot file including
+```
+$ shopt -s dotglob
+```
+* Use command below to roll back to default setting
+```
+$ shopt -u dotglob
+```
