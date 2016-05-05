@@ -190,6 +190,15 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
+### Display images that are placed out from web root
+[ref - get file extension](http://stackoverflow.com/questions/2633908/php-display-image-with-header)
+[ref - readfile()](http://php.net/manual/en/function.readfile.php)
+```php
+$file = '/foo/bar/aPhoto.jpg';
+header('Content-type:image/jpeg');
+readfile($file);
+```
+
 ### Reduce memories from unusing parameters
 ```php
 unset($someParam);
