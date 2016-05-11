@@ -197,6 +197,23 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+### Get length of objects' array(JSON data)
+```javascript
+let data = [{name:'Kay'}, {name:'Ryan'}, {name:'Rex'}]
+
+let size = (obj) => {
+  let size = 0
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) size++
+  }
+  return size
+}
+
+let dataMount = size(data)
+console.log(dataMount)
+// 3
+```
+
 ### Detect global key pressing without jQuery
 ```javascript
 var getKeypressEvent = function(event) {
