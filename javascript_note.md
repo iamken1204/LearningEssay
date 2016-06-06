@@ -197,6 +197,20 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+### How to process elements that are `getElementsByClassName()`
+[ref](http://stackoverflow.com/questions/3871547/js-iterating-over-result-of-getelementsbyclassname-using-array-foreach)   
+Since the elements get by `getElementsByClassName()` is called __HTMLCollection__, you cannot use `for (var el in els) {}` or `els.forEach(function(el))`(your `el` would be more than you suspect), use `Array.prototype.forEach.call(els, function(el) {})`.
+```javascript
+var els = document.getElementsByClassName('myclass')
+
+Array.prototype.forEach.call(els, function(el) {
+    // Do stuff here
+});
+
+// Or
+[].forEach.call(els, function (el) {...})
+```
+
 ### Get length of objects' array(JSON data)
 ```javascript
 let data = [{name:'Kay'}, {name:'Ryan'}, {name:'Rex'}]
