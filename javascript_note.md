@@ -197,6 +197,19 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+### Get form by form's name
+You can use `document.yourFormName` to fetch form and it's inner doms by theres `name` attribute.
+```javascript
+// html
+<form name="aform">
+	<input name="ainput">
+</form>
+
+// js
+let myForm = document.aform
+let myInput = myForm.ainput
+```
+
 ### How to process elements that are `getElementsByClassName()`
 [ref](http://stackoverflow.com/questions/3871547/js-iterating-over-result-of-getelementsbyclassname-using-array-foreach)   
 Since the elements get by `getElementsByClassName()` is called __HTMLCollection__, you cannot use `for (var el in els) {}` or `els.forEach(function(el))`(your `el` would be more than you suspect), use `Array.prototype.forEach.call(els, function(el) {})`.
