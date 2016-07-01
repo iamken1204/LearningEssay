@@ -84,3 +84,12 @@ $ ./wiki
 
 Assume __`-it`__ when you want to use `bash` in container.
     
+## How to use `exec` to execute commands in background containers.
+* format   
+```
+$ docker exec -it [container-id] [command]
+```
+* example
+```
+$ docker exec -it mariadb bash
+```
