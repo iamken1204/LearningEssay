@@ -11,7 +11,7 @@ So, use `Eloquent`'s `scope` __BEFORE__ raw quries.
 
 ### Delete Cookies
 >
-version: 5.2
+version: 5.2   
 [ref](https://coderwall.com/p/3etfgw/deleting-cookies-in-laravel)
 
 ```php
