@@ -198,6 +198,7 @@ var _videoControl = function(o) {
 ## some common questions
 
 ### Check if the given string IS NOT EMPTY AND IS NOT JUST WHITESPACE.
+[ref](http://stackoverflow.com/questions/2031085/how-can-i-check-if-string-contains-characters-whitespace-not-just-whitespace)
 ```javascript
 if (/\S/.test(myString)) {
 }
