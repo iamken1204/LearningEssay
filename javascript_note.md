@@ -197,6 +197,12 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+### Check if the given string IS NOT EMPTY AND IS NOT JUST WHITESPACE.
+```javascript
+if (/\S/.test(myString)) {
+}
+```
+
 ### Get form by form's name
 You can use `document.yourFormName` to fetch form and it's inner doms by theres `name` attribute.
 ```javascript
