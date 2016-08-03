@@ -2,7 +2,7 @@
 
 #### Datetime picker
 * [CuriousSolutions/DateTimePicker](https://github.com/CuriousSolutions/DateTimePicker)
-    * can run on browser :white_check_mark:
-    * jsdilivr :white_check_mark:
+    * :white_check_mark: can run on browser
+    * :white_check_mark: [jsdelivr](https://www.jsdelivr.com/projects/datetimepicker)
     * dependencies:
         1. jquery
