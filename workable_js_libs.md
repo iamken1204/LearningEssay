@@ -14,3 +14,4 @@
       ```
       <script src="//cdn.rawgit.com/fdaciuk/ajax/v2.1.2/dist/ajax.min.js"></script>
       ```
+      * :white_check_mark: vanilla js
