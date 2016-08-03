@@ -18,6 +18,7 @@
       * :heavy_exclamation_mark: Can not use?   
       Try [my version](https://gist.github.com/iamken1204/60b534bcb2a3b0fca128776d4cb37f24)   
       Example:   
+      
       ```javascript
       let request = AJAX.request({
         headers: {
