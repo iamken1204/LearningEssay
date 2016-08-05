@@ -1,5 +1,12 @@
 #PHP Note
 
+## environment
+### Connect to mssql database
+You have to install `php7.0-sybase` first.
+```shell
+$ sudo apt-get install php7.0-sybase
+```
+
 ## 語法
 
 ### calling class' function by string
