@@ -1,5 +1,14 @@
 # Git Note
 
+## save credentials for pushing to __https__ repositories
+[ref](http://stackoverflow.com/questions/11403407/git-asks-for-username-everytime-i-push)   
+```bash
+$ git config credential.helper store
+$ git push a_https_repo master
+Username: <type your username>
+Password: <type your password>
+```
+
 ## git upgrading by homebrew
 `$ brew upgrade git`
 
