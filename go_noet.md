@@ -212,6 +212,11 @@ func main() {
 
 ### about `struct`
 
+###### use fromat: `%+v` to print whole struct in console
+```go
+fmt.Printf("%+v", myStruct)
+```
+
 ###### declare a struct(like php's key-value array)
 ```go
 type Post struct {
