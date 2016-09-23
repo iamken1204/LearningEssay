@@ -932,3 +932,9 @@ fmt.Println("now time with custom layout:", now.Format(layout))
 // now time with default format: 2009-11-10 23:00:00 +0000 UTC
 // now time with custom layout: 2009-11-10 23:00:00
 ```
+
+#### `byte` to `string`
+```go
+myByte := []byte(`{"user":"Kettan Wu"}`)
+toStringed := string(myByte[:len(myByte)])
+```
