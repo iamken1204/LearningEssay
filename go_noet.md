@@ -1,5 +1,17 @@
 # GO language
 
+### fetch `interface{}`'s value by `type assertion`
+```go
+type MyInterface interface{}
+var iii MyInterface = "999"
+
+// use param.(<type>) to assert type
+println(iii)
+println(iii.(string))
+// (0x99920,0x10429f78)
+// 999
+```
+
 ### golang's Command
 * `go install` Build an executable binary program and put it into $GOPATH/bin so it can be call directly.
      * In `$GOPATH/src/github.com/iamken1204/hello/`, after you complete `hello.go`.
