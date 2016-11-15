@@ -1,5 +1,34 @@
 # GO language
 
+### A buffered channel can run WITHOUT creating another goroutines
+[ref](https://blog.golang.org/pipelines)
+```go
+func gen(nums ...int) <-chan int {
+	out := make(chan int)
+	go func() {
+		for _, n := range nums {
+			out <- n
+		}
+		close(out)
+	}()
+	return out
+}
+```
+Above is an unbuffered channel within a goroutine,   
+if the channel had been specified its capacity,   
+it can be run in a for loop WITHOUT creating another goroutine.   
+The func below is the same as above:
+```go
+func gen(nums ...int) <-chan int {
+	out := make(chan int, len(nums))
+	for _, n := range nums {
+		out <- n
+	}
+	close(out)
+	return out
+}
+```
+
 ### fetch `interface{}`'s value by `type assertion`
 ```go
 type MyInterface interface{}
