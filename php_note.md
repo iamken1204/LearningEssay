@@ -197,6 +197,13 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
+### Sent a AJAX request, but `$_POST` is empty
+To retrive data from request payload, you may use:
+```php
+<?php
+$payload = json_decode(file_get_contents('php://input'), true);
+```
+
 ### Display images that are placed out from web root
 [ref - get file extension](http://stackoverflow.com/questions/2633908/php-display-image-with-header)   
 [ref - readfile()](http://php.net/manual/en/function.readfile.php)
