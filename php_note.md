@@ -197,6 +197,31 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
+### About `DateInterval`
+[official doc](http://php.net/manual/en/class.dateinterval.php)   
+[ref](http://asika.windspeaker.co/post/3482-php-datetime-modify)   
+The `DateInterval` constructor's format:   
+* Use prefix `P` before assign _year_, _month_, _date_ (Ymd) relative times
+```php
+$tenDays = new DateInterval('P10D');
+```
+* Use prefix `T` after `P` and before assign _hour_, _minute_, _second_ (His) relative times
+```php
+$oneHour = new DateInterval('PT1H');
+```
+* Examples
+```php
+new DateInterval('P1Y2M3D'); // P開頭表示日期，一年二個月又三天
+
+new DateInterval('PT4H5M6S'); // T開頭表示時間，四小時五分又六秒
+
+new DateInterval('P1Y2M3DT4H5M6S'); // 合併起來，一年二個月三天四小時五分又六秒
+
+new DateInterval('P3M'); // 三個月
+
+new DateInterval('PT1H'); // 一小時
+```
+
 ### Count working days
 [ref](http://stackoverflow.com/questions/336127/calculate-business-days)   
 Use native object `DateTime`, `DateInterval`, `DatePeriod` to count working days.
