@@ -221,7 +221,7 @@ function number_of_working_days($from, $to) {
     return $days;
 }
 ```
-__NOTE__ `(new DateTime()->format('N'))` returns code of weekday, `7` represents _Sunday_, `1` represents _Monday_, and `6` represents _Saturday_.
+__NOTE__ `(new DateTime($yourDateTime))->format('N')` returns code of weekday, `7` represents _Sunday_, `1` represents _Monday_, and `6` represents _Saturday_.
 ```php
 $weekdaysMap = [
 	7, // Sunday
@@ -230,7 +230,7 @@ $weekdaysMap = [
 	3, // Wednesday
 	4, // Thursday
 	5, // Friday
-	6  // Saturday
+	6, // Saturday
 ];
 ```
 
