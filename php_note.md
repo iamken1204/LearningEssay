@@ -221,8 +221,20 @@ function number_of_working_days($from, $to) {
     return $days;
 }
 ```
+__NOTE__ `(new DateTime()->format('N'))` returns code of weekday, `7` represents _Sunday_, `1` represents _Monday_, and `6` represents _Saturday_.
+```php
+$weekdaysMap = [
+	7, // Sunday
+	1, // Monday
+	2, // Tuesday
+	3, // Wednesday
+	4, // Thursday
+	5, // Friday
+	6  // Saturday
+];
+```
 
-### Sent a AJAX request, but `$_POST` is empty
+### Sent an AJAX request, but `$_POST` is empty
 To retrive data from request payload, you may use:
 ```php
 <?php
