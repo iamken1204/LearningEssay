@@ -1,5 +1,21 @@
 # MySQL note
 
+### `mysqldump` specific tables or excepted tables [ref](http://dba.stackexchange.com/questions/9306/how-do-you-mysqldump-specific-tables)
+* Dump specific tables
+```shell
+mysqldump -u -p yourdb table1 table2 table3 > table_1_2_3.sql
+```
+* Dump tables without the excepted
+```shell
+DBTODUMP=mydb
+SQL="SET group_concat_max_len = 10240;"
+SQL="${SQL} SELECT GROUP_CONCAT(table_name separator ' ')"
+SQL="${SQL} FROM information_schema.tables WHERE table_schema='${DBTODUMP}'"
+SQL="${SQL} AND table_name NOT IN ('t1','t2','t3')"
+TBLIST=`mysql -u... -p... -AN -e"${SQL}"`
+mysqldump -u... -p... ${DBTODUMP} ${TBLIST} > mydb_tables.sql
+```
+
 ### 特定情境處理方法
 * 想要根據不重複 `account` __並且__找出最新 (`id` 最大) 的資料   
 `group by` 預設並不會找最新一筆，所以要用 `max()` 強迫 DB query 出符合需要的資料
