@@ -7,7 +7,7 @@ let vm = new Vue({
 })
 let cusPro = vm.$options.myCustomProperty
 ```
-If you are in child components, you can also use `$parent` to get parent Vue instance.
+If you are in child components, you can use `$parent` to get parent Vue instance.
 ```javascript
 let parentProp = this.$parent.$options.myCustomProperty
 ```
