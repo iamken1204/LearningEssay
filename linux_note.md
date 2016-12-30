@@ -1,5 +1,10 @@
 # Linux Note
 
+### View a certain user's processes [ref](http://unix.stackexchange.com/questions/85466/how-to-see-process-created-by-specific-user-in-unix-linux)
+```shell
+top -U [username]
+```
+
 ### Clear memory cache
 Linux' memory cache manager was located in localhost:11211 by default, use `telnet` to enter it.
 ```shell
