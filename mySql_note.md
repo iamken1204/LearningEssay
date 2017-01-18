@@ -1,5 +1,37 @@
 # MySQL note
 
+### Difference between `WHERE` and `HAVING`
+[ref](http://www.mysql.tw/2014/06/sqlwherehaving.html)
+* Quries with no `GROUP BY`, use `WHERE` only
+* Quries with `GROUP BY`, use `WHERE` before `GROUP BY`, then follow `HAVING`
+* `HAVING` only accetp the target that related with `GROUP BY`
+
+An example from [leetcode](https://leetcode.com/problems/duplicate-emails/),   
+query from a table that:
+```
++----+---------+
+| Id | Email   |
++----+---------+
+| 1  | a@b.com |
+| 2  | c@d.com |
+| 3  | a@b.com |
++----+---------+
+```
+the result should be:
+```
++---------+
+| Email   |
++---------+
+| a@b.com |
++---------+
+```
+```sql
+SELECT Email
+FROM Person
+GROUP BY Email
+HAVING count(Email) > 1;
+```
+
 ### `mysqldump` specific tables or excepted tables [ref](http://dba.stackexchange.com/questions/9306/how-do-you-mysqldump-specific-tables)
 * Dump specific tables
 ```shell
