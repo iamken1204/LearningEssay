@@ -5,7 +5,7 @@ Use `bytes.Buffer.WriteString()` to handle strings instead of `str1 + str2`.
 ```go
 package main
 
-import "butes"
+import "bytes"
 import "fmt"
 
 func main() {
