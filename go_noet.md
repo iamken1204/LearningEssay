@@ -1,5 +1,25 @@
 # GO language
 
+### Concatenate strings efficiently [ref](http://stackoverflow.com/questions/1760757/how-to-efficiently-concatenate-strings-in-go)
+Use `bytes.Buffer.WriteString()` to handle strings instead of `str1 + str2`.
+```go
+package main
+
+import "butes"
+import "fmt"
+
+func main() {
+	var buffer bytes.Buffer
+	
+	for i := 0; i < 100000; i++ {
+		buffer.WriteString("A")
+	}
+	
+	fmt.Println(buffer.String())
+}
+```
+> Incredibly fast. Made some naive "+" string concat in my program go from 3 minutes to 1.3 seconds. – Malcolm Sep 17 '13 at 16:34
+
 ### A buffered channel can run WITHOUT creating another goroutines
 [ref](https://blog.golang.org/pipelines)
 ```go
@@ -33,7 +53,7 @@ func gen(nums ...int) <-chan int {
 ```go
 type MyInterface interface{}
 var iii MyInterface = "999"
-
+	
 // use param.(<type>) to assert type
 println(iii)
 println(iii.(string))
