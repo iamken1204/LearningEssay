@@ -197,6 +197,30 @@ echo is_numeric($c); // 0
 ======
 ## some common questions
 
+### Save compressed text into MySQL's `BLOB` type
+* To `BLOB`
+```php
+function textToMySQLBLOB($text = '') : string
+{
+    // @see http://php.net/manual/en/function.bin2hex.php
+    $hexed = bin2hex($text);
+    // Add '0x' in front of $hexed,
+    // so MySQL can accept it as BLOB type
+    return '0x' . $hexed;
+}
+```
+* To text
+```php
+function MySQLBLOBToText($blob = '') : string
+{
+    // Remove '0x' from $blob
+    $hexed = substr($blob, 2);
+    $bStr = hex2bin($hexed);
+    return $bStr;
+}
+```
+
+
 ### About `DateInterval`
 [official doc](http://php.net/manual/en/class.dateinterval.php)   
 [ref](http://asika.windspeaker.co/post/3482-php-datetime-modify)   
