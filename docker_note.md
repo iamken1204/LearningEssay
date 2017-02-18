@@ -1,5 +1,11 @@
 # Docker
 
+## Notes
+```shell
+$ docker start <CONTAINER ID>
+$ docker exec -it <CONTAINER ID> /bin/bash
+```
+
 ## docker-machine path
 `~/.docker/machine/machines`
 
