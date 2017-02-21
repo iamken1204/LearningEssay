@@ -1,5 +1,15 @@
 # Linux Note
 
+### Check hardware name
+```shell
+dmidecode | grep "Product Name"
+```
+
+### Check CPU spec
+```shell
+cat /proc/cpuinfo | grep name | awk -F: '{print $(NF)}' | uniq -c
+```
+
 ### View a certain user's processes [ref](http://unix.stackexchange.com/questions/85466/how-to-see-process-created-by-specific-user-in-unix-linux)
 ```shell
 top -U [username]
