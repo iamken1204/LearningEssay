@@ -1,5 +1,18 @@
 # MySQL note
 
+### Show partition information
+```sql
+SELECT *
+FROM information_schema.partitions
+WHERE table_name = table_name;
+```
+
+### Show all indexes within a specific table
+```sql
+SHOW INDEXES
+FROM table_name;
+```
+
 ### Difference between `WHERE` and `HAVING`
 [ref](http://www.mysql.tw/2014/06/sqlwherehaving.html)
 * Quries with no `GROUP BY`, use `WHERE` only
