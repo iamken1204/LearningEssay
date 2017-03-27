@@ -1,5 +1,39 @@
 # GO language
 
+### Use Go to execute system commands
+```go
+package main
+
+import (
+  "io/ioutil"
+  "os"
+  "os/exec"
+)
+
+func main() {
+
+  // Use os.Chdir to change working directory
+  os.Chdir("/home/apps/mqtt-handler")
+
+  // Prepare command to be executed
+  // The first param is command name, and the follows are all parameters
+  // $ python dlib_face_det.py https://ket.tan/images/a56q.jpg test.jpg
+  cmd := command.Command("python", "dlib_face_det.py", "https://ket.tan/images/a56q.jpg", "test.jpg")
+
+  // Create StdoutPipe to handle command's return values
+  stdout, err := cmd.StdoutPipe()
+
+  // Execute command
+  cmd.Start()
+
+  // Fetch all return values
+  res, err := ioutil.ReadAll(stdout)
+
+  fmt.Println(string(res))
+  
+}
+```
+
 ### Concatenate strings efficiently [ref](http://stackoverflow.com/questions/1760757/how-to-efficiently-concatenate-strings-in-go)
 Use `bytes.Buffer.WriteString()` to handle strings instead of `str1 + str2`.
 ```go
