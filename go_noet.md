@@ -2,7 +2,7 @@
 
 ### Extract JSON object from string contains other information
 [playground](https://play.golang.org/p/SllAGH4NE_)
-```
+```go
 package main
 
 import (
