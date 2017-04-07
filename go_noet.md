@@ -1,5 +1,47 @@
 # GO language
 
+### Extract JSON object from string contains other information
+[playground](https://play.golang.org/p/SllAGH4NE_)
+```
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"regexp"
+)
+
+type V struct {
+	Id      int    `json:"id"`
+	Message string `json:"message"`
+}
+
+func main() {
+
+	content := `blah blah
+	some extra information
+	{
+	    "id": 100,
+	    "message": "hello"
+	}
+	other comments`
+
+	// (?s) means use flag s, flag s is to let . match \n (default false)
+	// @see https://golang.org/pkg/regexp/syntax/#hdr-Syntax
+	// this regexp will extract a json object out from given string
+	ret := regexp.MustCompile("(?s){.*}")
+
+	extracted_json := ret.FindString(content)
+
+	var v V
+	json.Unmarshal([]byte(extracted_json), &v)
+
+	fmt.Println(v)
+
+}
+
+```
+
 ### Use Go to execute system commands
 ```go
 package main
