@@ -70,6 +70,10 @@ func main() {
 
   // Fetch all return values
   res, err := ioutil.ReadAll(stdout)
+  
+  // Wait waits for the command to exit
+  // It must have been started by Start()
+  cmd.Wait()
 
   fmt.Println(string(res))
   
