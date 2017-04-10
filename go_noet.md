@@ -80,6 +80,16 @@ func main() {
 }
 ```
 
+### Get `time.Now()` at specific timezone
+[ref](http://stackoverflow.com/questions/27991671/how-to-get-the-current-timestamp-in-other-timezones-in-golang)   
+Go uses IANA timezone database [timezone list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)   
+1. Get location by `time.LoadLocation()`
+2. Set location to `time` package by `time.In()`
+```go
+loc, err := time.LoadLocation("Asia/Taipei")
+now := time.Now().In(loc)
+```
+
 ### Concatenate strings efficiently [ref](http://stackoverflow.com/questions/1760757/how-to-efficiently-concatenate-strings-in-go)
 Use `bytes.Buffer.WriteString()` to handle strings instead of `str1 + str2`.
 ```go
