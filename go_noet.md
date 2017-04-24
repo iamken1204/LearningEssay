@@ -69,6 +69,7 @@ func main() {
   cmd.Start()
 
   // Fetch all return values
+  // ioutil.ReadAll() must be run before cmd.Wait()
   res, err := ioutil.ReadAll(stdout)
   
   // Wait waits for the command to exit
