@@ -197,7 +197,8 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
-## combine dynamic `regexp` from given string
+### combine dynamic `regexp` from given string
+[ref](https://stackoverflow.com/questions/874709/converting-user-input-string-to-regular-expression)
 ```javascript
 let re = new RegExp('[banana|orange]', 'i')
 let result1 = re.test('orange')
