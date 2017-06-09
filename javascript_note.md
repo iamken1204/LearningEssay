@@ -197,6 +197,14 @@ var _videoControl = function(o) {
 ======
 ## some common questions
 
+## combine dynamic `regexp` from given string
+```javascript
+let re = new RegExp('[banana|orange]', 'i')
+let result1 = re.test('orange')
+// equals
+let result2 = /[banana|orange]/i.test('orange')
+```
+
 ### Check if the given string IS NOT EMPTY AND IS NOT JUST WHITESPACE.
 [ref](http://stackoverflow.com/questions/2031085/how-can-i-check-if-string-contains-characters-whitespace-not-just-whitespace)
 ```javascript
