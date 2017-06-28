@@ -1,5 +1,28 @@
 # MySQL note
 
+### You can't specify target table for INSERT/UPDATE/DELETE in FROM clause
+[ref](https://stackoverflow.com/questions/4429319/you-cant-specify-target-table-for-update-in-from-clause)   
+You cannot manipulate a table by reference the same table in subquery.   
+Instead of:
+```sql
+UPDATE my_table
+SET my_table.aaa = (
+	SELECT bbb
+	FROM my_table
+	...
+)
+```
+use:
+```sql
+UPDATE my_table
+SET my_table.aaa = (
+	SELECT bbb
+	FROM (SELECT * FROM my_table) AS something
+	...
+)
+```
+
+
 ### Show partition information
 ```sql
 SELECT *
